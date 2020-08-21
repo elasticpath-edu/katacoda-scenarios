@@ -32,9 +32,7 @@
         }
       ] 
     }
-  },"files": [
-    "environment.json","collection.json"
-  ],
+  },
   "environment": {
        "hideintro": false,
         "hidefinish": false,
