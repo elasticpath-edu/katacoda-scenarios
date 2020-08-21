@@ -7264,8 +7264,10 @@
 								"exec": [
 									"const json = pm.response.json()",
 									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-									"const value = Array.isArray(d) ? d[0].id : d.id",
-									"pm.environment.set(\"productID\", value)"
+									"const product = Array.isArray(d) ? d[0] : d",
+									"const value = product.id",
+									"pm.environment.set(\"productID\", value)",
+									"tests[\"[INFO] Response: \" + JSON.stringify(product,null,\"\\t\")] = true"
 								],
 								"type": "text/javascript"
 							}
