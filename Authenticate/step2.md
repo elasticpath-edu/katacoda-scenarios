@@ -21,3 +21,9 @@ In this exercise, you will attempt to access an API endpoint without authorizati
 `newman run collection.json --folder get-client-credentials-token -e environment.json --export-environment environment.json`{{execute}}
 
 > Client credentials token is valid for 30 minutes only. You can get a new token following the instructions above if you get a `401` error.
+
+### Get products list with access token
+
+* Send the request again and you should receive a 200 success this time: 
+
+`newman run collection.json --folder get-all-products -e environment.json --verbose`{{execute}}

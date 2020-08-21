@@ -7085,6 +7085,8 @@
 									"script": {
 										"id": "8e80fdc2-7db9-42fc-a3b7-4f8ab2f5e2b3",
 										"exec": [
+											"tests[\"[INFO] Response: \" + responseBody] = true;",
+											"",
 											"const json = pm.response.json()",
 											"const d = json.hasOwnProperty(\"data\") ? json.data : json",
 											"const value = Array.isArray(d) ? d[0].id : d.id",
