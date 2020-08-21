@@ -11,7 +11,7 @@ In this exercise, you will attempt to access an API endpoint without authorizati
 * Explore the `Get all products` request under `products` folder.
 * Send the request and you should receive a 401 error like the following: 
 
-`newman run collection.json --folder "Get al products" -e environment.json`{{execute}}
+`newman run collection.json --folder "Get all products" -e environment.json`{{execute}}
 
 ### Authenticate
 
@@ -26,4 +26,4 @@ In this exercise, you will attempt to access an API endpoint without authorizati
 
 * Send the request again and you should receive a `200` success this time: 
 
-`newman run collection.json --folder "Get al products" -e environment.json --verbose -r json`{{execute}}
+`newman run collection.json --folder "Get all products" -e environment.json --verbose`{{execute}}
