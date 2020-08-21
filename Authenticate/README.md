@@ -1,7 +1,6 @@
 # Katacoda Postman Test
 This is a test repository. Starting building your own scenario by editing the files in this directory. Create additional scenarios by adding additional directories to the top level folder.
 
-
 ## index.json
 The file _index.json_ contains all the information about the scenario. It has the title, description and a heading for each step.
 
@@ -23,3 +22,4 @@ Interested in metrics, private repositories and environments for classroom teach
 
 ## Interactive Developer Portals
 Want to take your scenarios to the next level? Visit https://katacoda.com/embed
+

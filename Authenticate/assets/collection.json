@@ -280,76 +280,6 @@
 			"name": "authentication",
 			"item": [
 				{
-					"name": "get-client-credentials-token",
-					"item": [
-						{
-							"name": "Get client credentials token",
-							"event": [
-								{
-									"type": "text/javascript",
-									"listen": "test",
-									"script": {
-										"id": "6255569b-dd29-4f12-be4f-ad5ff14c2ba8",
-										"exec": [
-											"const json = pm.response.json()",
-											"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-											"const value = Array.isArray(d) ? d[0].access_token : d.access_token",
-											"pm.environment.set(\"accessToken\", value)"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "accept",
-										"value": "application/json"
-									},
-									{
-										"key": "content-type",
-										"value": "text/plain"
-									}
-								],
-								"body": {
-									"mode": "urlencoded",
-									"urlencoded": [
-										{
-											"key": "client_id",
-											"value": "{{clientID}}",
-											"type": "text"
-										},
-										{
-											"key": "client_secret",
-											"value": "{{clientSecret}}",
-											"type": "text"
-										},
-										{
-											"key": "grant_type",
-											"value": "client_credentials",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{authUrl}}/oauth/access_token",
-									"host": [
-										"{{authUrl}}"
-									],
-									"path": [
-										"oauth",
-										"access_token"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
 					"name": "Get implicit token",
 					"event": [
 						{
@@ -390,6 +320,69 @@
 								{
 									"key": "grant_type",
 									"value": "implicit",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{authUrl}}/oauth/access_token",
+							"host": [
+								"{{authUrl}}"
+							],
+							"path": [
+								"oauth",
+								"access_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get client credentials token",
+					"event": [
+						{
+							"type": "text/javascript",
+							"listen": "test",
+							"script": {
+								"id": "6255569b-dd29-4f12-be4f-ad5ff14c2ba8",
+								"exec": [
+									"const json = pm.response.json()",
+									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
+									"const value = Array.isArray(d) ? d[0].access_token : d.access_token",
+									"pm.environment.set(\"accessToken\", value)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "content-type",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "{{clientID}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{clientSecret}}",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
 									"type": "text"
 								}
 							]
@@ -7074,83 +7067,6 @@
 			"name": "products",
 			"item": [
 				{
-					"name": "get-all-products",
-					"item": [
-						{
-							"name": "Get all products",
-							"event": [
-								{
-									"type": "text/javascript",
-									"listen": "test",
-									"script": {
-										"id": "8e80fdc2-7db9-42fc-a3b7-4f8ab2f5e2b3",
-										"exec": [
-											"tests[\"[INFO] Response: \" + responseBody] = true;",
-											"",
-											"const json = pm.response.json()",
-											"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-											"const value = Array.isArray(d) ? d[0].id : d.id",
-											"pm.environment.set(\"productID\", value)"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{accessToken}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "accept",
-										"value": "application/json"
-									},
-									{
-										"key": "content-type",
-										"value": "application/json"
-									},
-									{
-										"key": "x-moltin-auth-store",
-										"value": "{{storeID}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/products",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"products"
-									],
-									"query": [
-										{
-											"key": "page[offset]",
-											"value": "0",
-											"disabled": true
-										},
-										{
-											"key": "page[limit]",
-											"value": "10",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
 					"name": "Get single product",
 					"request": {
 						"auth": {
@@ -7332,6 +7248,74 @@
 							"path": [
 								"products",
 								"{{productID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all products",
+					"event": [
+						{
+							"type": "text/javascript",
+							"listen": "test",
+							"script": {
+								"id": "8e80fdc2-7db9-42fc-a3b7-4f8ab2f5e2b3",
+								"exec": [
+									"const json = pm.response.json()",
+									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
+									"const value = Array.isArray(d) ? d[0].id : d.id",
+									"pm.environment.set(\"productID\", value)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-moltin-auth-store",
+								"value": "{{storeID}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "page[offset]",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "page[limit]",
+									"value": "10",
+									"disabled": true
+								}
 							]
 						}
 					},
