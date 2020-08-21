@@ -38,6 +38,7 @@
   "environment": {
        "hideintro": false,
         "hidefinish": false,
+        "hideHiddenFiles": true,
         "uilayout": "editor-terminal",
         "uisettings": "javascript",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nLet's test Postman in CLI\u001b[m\r\n"
