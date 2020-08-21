@@ -20,16 +20,20 @@
       "client": [
         {
           "file": "authenticate.json",
-          "target": "~/"
+          "target": "/root"
         },
          {
           "file": "setenv.sh",
-          "target": "~/"
+          "target": "/root"
+        },
+        {
+          "file": "sample-file.txt",
+          "target":"/root"
         }
       ] 
     }
   },"files": [
-    "authenticate.json","setenv.sh"
+    "authenticate.json","setenv.sh","sample-file.txt"
   ],
   "environment": {
        "hideintro": false,
