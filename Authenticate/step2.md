@@ -4,18 +4,20 @@ In this exercise, you will attempt to access an API endpoint without authorizati
 
 ### Attempt to get products list
 
+* Open the collection in the editor:
+
+`/root/collection.json`{{open}}
+
 * Explore the `Get all products` request under `products/get-all-products` folder.
 * Send the request and you should receive a 401 error like the following: 
 
-`newman run /root/collection.json --folder products/get-all-products -e /root/environment.json`{{execute}}
+`newman run collection.json --folder get-all-products -e environment.json`{{execute}}
 
 ### Authenticate
 
-### Attempt to get products list
-
-* Explore the `Get client credentials token` request under `authenticate/get-client-credentials-token` folder.
+* Explore the `Get client credentials token` request under `authentication/get-client-credentials-token` folder.
 * Send the request to get the access token and save it in `accessToken` environment variable:
 
-`newman run /root/collection.json --folder authenticate/get-client-credentials-token -e /root/environment.json --export-environment new_environment.json`{{execute}}
+`newman run collection.json --folder get-client-credentials-token -e environment.json --export-environment environment.json`{{execute}}
 
 > Client credentials token is valid for 30 minutes only. You can get a new token following the instructions above if you get a `401` error.

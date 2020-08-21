@@ -1,5 +1,3 @@
-This is your first step.
-
 ### Set up the Training Environment
 
 You will be using the API key from your training store to create a new environment in Postman.
