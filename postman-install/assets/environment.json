@@ -1,0 +1,39 @@
+{
+  "id": "2749e1c1-19fb-45d1-937c-8f25f7eeffda",
+  "name": "EPCC Environment",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.moltin.com/v2",
+      "enabled": true
+    },
+    {
+      "key": "authUrl",
+      "value": "https://api.moltin.com",
+      "enabled": true
+    },
+    {
+      "key": "clientID",
+      "value": "XXX",
+      "enabled": true
+    },
+    {
+      "key": "clientSecret",
+      "value": "XXX",
+      "enabled": true
+    },
+    {
+      "key": "cartID",
+      "value": "1",
+      "enabled": true
+    },
+    {
+      "key": "promoCode",
+      "value": "ABC123",
+      "enabled": true
+    }
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2020-03-06T17:50:28.982Z",
+  "_postman_exported_using": "Postman/7.18.1"
+}

@@ -1,13 +1,15 @@
 This is your first step.
 
-## Task
+### Set up the Training Environment
 
-This is a _TEST_ of creating a simple authentication request and display the **response**
+You will be using the API key from your training store to create a new environment in Postman.
+>You can request a training store by following the instructions from the [Request a Training Store](https://elasticpath-customer.okta.com/app/litmos/exknrryohFKR6waw9356/sso/saml?RelayState=http://education.elasticpath.com/course/1913632) module.
 
-You can send a request to Postman Echo by running the following command:
+* Go to https://dashboard.elasticpath.com/ and make note of your `Client ID` and `Client secret`.
+* Open the environment file:
 
-`newman run /root/upload-file.json`{{execute}}
+`/root/environment.json`{{open}}
 
-Now, time to send an authentication request to Commerce Cloud:
+* Update environment variables named `clientID` and `clientSecret` using the values from the previous step.
 
-`newman run /root/get-client-credentials.json`{{execute}}
+As you progress through the collection, additional variables will be created and used from request to request. You can confirm the value of any variable's current value from the environment settings.

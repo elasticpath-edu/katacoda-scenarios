@@ -2,42 +2,42 @@
   "title": "Use Postman with Commerce Cloud API",
   "description": "Postman Test",
   "difficulty": "beginner",
-  "time": "2 minutes",
+  "time": "5 minutes",
   "details": {
     "steps": [{
-      "title": "Step 1 - Send a Request",
+      "title": "Step 1 - Setup Environment",
       "text": "step1.md"
+    },
+    {
+      "title": "Step 2 - Authenticate",
+      "text": "step2.md"
     }],
     "intro": {
       "text": "intro.md",
       "credits": "",
-      "code": "setenv.sh" 
+      "code": "install-newman.sh" 
     },
     "finish": {
       "text": "finish.md"
     },
     "assets": {
       "client": [
-        {
-          "file": "upload-file.json",
-          "target": "/root"
-        },
          {
-          "file": "setenv.sh",
+          "file": "install-newman.sh",
           "target": "/root"
         },
         {
-          "file": "sample-file.txt",
-          "target":"/root"
+          "file": "collection.json",
+          "target": "/root"
         },
         {
-          "file": "get-client-credentials.json",
-          "target":"/root"
+          "file": "environment.json",
+          "target": "/root"
         }
       ] 
     }
   },"files": [
-    "upload-file.json","setenv.sh","sample-file.txt"
+    "environment.json","collection.json"
   ],
   "environment": {
        "hideintro": false,
