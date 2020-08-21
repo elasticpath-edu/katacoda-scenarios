@@ -1,0 +1,44 @@
+{
+  "title": "Use Postman with Commerce Cloud API",
+  "description": "Postman Test",
+  "difficulty": "beginner",
+  "time": "2 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - Send a Request",
+      "text": "step1.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": "",
+      "code": "setenv.sh" 
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": "authenticate.json",
+          "target": "~/"
+        },
+         {
+          "file": "setenv.sh",
+          "target": "~/"
+        }
+      ] 
+    }
+  },"files": [
+    "authenticate.json","setenv.sh"
+  ],
+  "environment": {
+       "hideintro": false,
+        "hidefinish": false,
+        "uilayout": "editor-terminal",
+        "uisettings": "json",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nLet's test Postman in CLI\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "node6"
+  }
+}
