@@ -19,7 +19,7 @@
     "assets": {
       "client": [
         {
-          "file": "authenticate.json",
+          "file": "upload-file.json",
           "target": "/root"
         },
          {
@@ -29,17 +29,21 @@
         {
           "file": "sample-file.txt",
           "target":"/root"
+        },
+        {
+          "file": "get-client-credentials.json",
+          "target":"/root"
         }
       ] 
     }
   },"files": [
-    "authenticate.json","setenv.sh","sample-file.txt"
+    "upload-file.json","setenv.sh","sample-file.txt"
   ],
   "environment": {
        "hideintro": false,
         "hidefinish": false,
         "uilayout": "editor-terminal",
-        "uisettings": "json",
+        "uisettings": "javascript",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nLet's test Postman in CLI\u001b[m\r\n"
   },
   "backend": {

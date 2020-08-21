@@ -2,6 +2,12 @@ This is your first step.
 
 ## Task
 
-This is an _example_ of creating a scenario and running a **command**
+This is a _TEST_ of creating a simple authentication request and display the **response**
 
-`echo 'Hello World'`{{execute}}
+You can send a request to Postman Echo by running the following command:
+
+`newman run /root/upload-file.json`{{execute}}
+
+Now, time to send an authentication request to Commerce Cloud:
+
+`newman run /root/get-client-credentials.json`{{execute}}
