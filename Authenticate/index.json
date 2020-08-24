@@ -23,11 +23,7 @@
     "assets": {
       "client": [
         {
-          "file": "collection.json",
-          "target": "/root"
-        },
-        {
-          "file": "environment.json",
+          "file": "*",
           "target": "/root"
         }
       ] 
