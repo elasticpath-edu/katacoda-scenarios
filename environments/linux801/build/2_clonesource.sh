@@ -3,5 +3,5 @@
 # git branch --track base origin/base
 # git branch --track extend-cm/step1 origin/extend-cm/step1
 # mvn clean install -DskipAllTests
-# testing again and again
+# testing
 npm install newman -g
