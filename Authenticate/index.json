@@ -14,8 +14,7 @@
     }],
     "intro": {
       "text": "intro.md",
-      "credits": "",
-      "code": "install-newman.sh" 
+      "credits": "nagesh.dixit@elasticpath.com" 
     },
     "finish": {
       "text": "finish.md"
@@ -38,6 +37,6 @@
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nLet's test Postman in CLI\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "dixitnagesh-linux801"
+    "imageid": "elasticpath-linux801"
   }
 }

@@ -13,9 +13,6 @@ export MAVEN_HOME=/home/ec2-user/apache-maven-3.6.2
 export MAVEN_OPTS='-Xmx2048m -XX:ReservedCodeCacheSize=128m -Dsun.lang.ClassLoader.allowArraySyntax=true'
 export PATH=$PATH:$MAVEN_HOME/bin
 
-wget https://download.jetbrains.com/idea/ideaIC-2020.1.2.tar.gz?_ga=2.64397615.1862288659.1593703260-682370932.1593703260
-mv ideaIC-2020.1.2.tar.gz\?_ga\=2.64397615.1862288659.1593703260-682370932.1593703260 ideaIC-2020.1.2.tar.gz
-sudo tar -xzf ideaIC-2020.1.2.tar.gz -C /opt
 
 wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 sudo yum localinstall mysql57-community-release-el7-8.noarch.rpm
