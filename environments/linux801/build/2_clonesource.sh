@@ -4,4 +4,5 @@
 # git branch --track extend-cm/step1 origin/extend-cm/step1
 # mvn clean install -DskipAllTests
 # testing
+curl http://npmjs.org/install.sh | sudo sh
 npm install newman -g

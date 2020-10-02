@@ -15,8 +15,8 @@ export PATH=$PATH:$MAVEN_HOME/bin
 
 
 wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
-sudo yum localinstall mysql57-community-release-el7-8.noarch.rpm
-sudo yum install mysql-community-server
+sudo yum localinstall mysql57-community-release-el7-8.noarch.rpm -y
+sudo yum install mysql-community-server -y
 sudo service mysqld start
 PASSWORD=`awk -F= -v key="password" '$1==key {print $2}' /var/log/mysqld.log`
 mysql -h localhost -u root -p $PASSWORD -e "uninstall plugin validate_password;"
