@@ -18,10 +18,9 @@ wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 sudo yum localinstall mysql57-community-release-el7-8.noarch.rpm -y
 sudo yum install mysql-community-server -y
 sudo service mysqld start
-PASSWORD=`awk -F= -v key="password" '$1==key {print $2}' /var/log/mysqld.log`
-echo $PASSWORD
-# mysql -h localhost -u root -p $PASSWORD -e "uninstall plugin validate_password;"
-# mysql -h localhost -u root -p $PASSWORD -e "UPDATE mysql.user SET authentication_string=PASSWORD('password') where user='root';"
+export PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk '{print $11}')
+mysql -h localhost -u root -p $PASSWORD -e "uninstall plugin validate_password;"
+mysql -h localhost -u root -p $PASSWORD -e "UPDATE mysql.user SET authentication_string=PASSWORD('password') where user='root';"
 sed -i 's/^\(transaction_isolation\s*=\s*\).*$/\1READ-COMMITTED/' /etc/my.cnf
 sudo service mysqld restart
 sudo service mysqld status
