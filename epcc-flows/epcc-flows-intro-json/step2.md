@@ -1,5 +1,3 @@
-## Authentication
-
 In this exercise, you will attempt to access an API endpoint without authorization, see the error, then authenticate properly to receive a client credentials token. 
 
 ### Set up the Training Environment

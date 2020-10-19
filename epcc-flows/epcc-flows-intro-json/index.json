@@ -1,23 +1,23 @@
 {
     "title": "Introduction to Flows",
     "description": "Learn what Flows are and where to use them.",
-    "difficulty": "beginner",
-    "time": "5 minutes",
+    "difficulty": "Intermediate",
+    "time": "1 hour",
     "details": {
       "steps": [{
-        "title": "Step 1 - Flows Taxonomy",
+        "title": "Custom Data (Flows)",
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - Authenticate",
+        "title": "Set up the Training Environment and Authenticate",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Core vs non-core Flows",
+        "title": "Create a Custom Resource",
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Create Relationships",
+        "title": "Extend a Core Resource",
         "text": "step4.md"
       }
     ],
