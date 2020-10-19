@@ -1,0 +1,52 @@
+{
+    "title": "Introduction to Flows",
+    "description": "Learn what Flows are and where to use them.",
+    "difficulty": "beginner",
+    "time": "5 minutes",
+    "details": {
+      "steps": [{
+        "title": "Step 1 - Flows Taxonomy",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - Authenticate",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - Core vs non-core Flows",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Create Relationships",
+        "text": "step4.md"
+      }
+    ],
+      "intro": {
+        "text": "intro.md",
+        "credits": "education@elasticpath.com",
+        "code": "install-newman.sh"
+      },
+      "finish": {
+        "text": "finish.md"
+      },
+      "assets": {
+        "client": [
+          {
+            "file": "*",
+            "target": "/root"
+          }
+        ] 
+      }
+    },
+    "environment": {
+         "hideintro": false,
+          "hidefinish": false,
+          "hideHiddenFiles": true,
+          "uilayout": "editor-terminal",
+          "uisettings": "javascript",
+      "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nLet's work with Flows.\u001b[m\r\n"
+    },
+    "backend": {
+      "imageid": "node6"
+    }
+  }

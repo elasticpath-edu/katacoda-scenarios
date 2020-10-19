@@ -18,6 +18,7 @@ wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 yum localinstall mysql57-community-release-el7-8.noarch.rpm -y
 yum install mysql-community-server -y
 systemctl set-environment MYSQLD_OPTS="--skip-grant-tables"
+# https://stackoverflow.com/questions/33510184/how-to-change-the-mysql-root-account-password-on-centos7/34207996#34207996
 service mysqld start
 mysql -u root -e "UPDATE mysql.user SET authentication_string = PASSWORD('password') WHERE User = 'root' AND Host = 'localhost';FLUSH PRIVILEGES;"
 service mysqld stop

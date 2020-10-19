@@ -1,0 +1,13 @@
+{
+    "title": "Elastic Path Commerce Cloud Flows Training",
+    "description": "Learn how to create custom data using Flows in Elastic Path Commerce Cloud",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "epcc-flows-intro-json",
+        "title": "Introduction to Flows",
+        "description": "Learn what Flows are and where to use them."
+      }
+    ]
+  }
+  
