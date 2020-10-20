@@ -43,10 +43,12 @@
       }
     },
     "environment": {
+        "uieditorpath": "/root",
          "hideintro": false,
           "hidefinish": false,
           "hideHiddenFiles": true,
           "uilayout": "editor-terminal",
+          "showide": true,
           "uisettings": "javascript",
       "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nLet's work with Flows.\u001b[m\r\n"
     },
