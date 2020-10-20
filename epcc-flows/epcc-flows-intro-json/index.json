@@ -43,10 +43,11 @@
       }
     },
     "environment": {
-          "uieditorpath": "/root",
-          "hideHiddenFiles": true,
-          "uilayout": "vscode-terminal-split",
-           "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nLet's work with Flows.\u001b[m\r\n"
+          "uieditorpath": "/root/environment.json",
+          "showide": true,
+          "idePort": 23000,
+          "uilayout": "terminal",
+          "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nLet's work with Flows.\u001b[m\r\n"
     },
     "backend": {
       "imageid": "nodejs:12"
