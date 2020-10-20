@@ -2976,7 +2976,9 @@
 									"const json = pm.response.json()",
 									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
 									"const value = Array.isArray(d) ? d[0].id : d.id",
-									"pm.environment.set(\"flowID\", value)"
+									"const slug = Array.isArray(d) ? d[0].slug : d.slug",
+									"pm.environment.set(\"flowID\", value)",
+									"pm.environment.set(\"flowSlug\", slug)"
 								],
 								"type": "text/javascript"
 							}
@@ -3410,7 +3412,9 @@
 									"const json = pm.response.json()",
 									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
 									"const value = Array.isArray(d) ? d[0].id : d.id",
-									"pm.environment.set(\"fieldID\", value)"
+									"const slug = Array.isArray(d) ? d[0].slug : d.slug",
+									"pm.environment.set(\"fieldID\", value)",
+									"pm.environment.set(\"fieldSlug\", slug)"
 								],
 								"type": "text/javascript"
 							}

@@ -12,7 +12,7 @@ You will be using the API key from your training store to create a new environme
 
 * Update environment variables named `clientID` and `clientSecret` using the values from the previous step.
 
-As you progress through the collection, additional variables will be created and used from request to request. You can confirm the value of any variable's current value from the environment settings.
+As you progress through the collection, additional variables will be created and used from request to request. You can confirm the value of any variable's current value from the environment.json file.
 
 ### Attempt to get products list
 
@@ -28,7 +28,7 @@ As you progress through the collection, additional variables will be created and
 ### Authenticate
 
 * Explore the `Get client credentials token` request under `authentication` folder.
-* Send the request to get the access token and save it in `accessToken` environment variable:
+* Send the request to get the access token that will be saved in `accessToken` environment variable by the script.
 
 `newman run collection.json --folder "Get client credentials token" -e environment.json --export-environment environment.json`{{execute}}
 
