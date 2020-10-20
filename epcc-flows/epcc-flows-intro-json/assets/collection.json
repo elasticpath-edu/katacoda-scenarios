@@ -3086,8 +3086,12 @@
 								"exec": [
 									"const json = pm.response.json()",
 									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-									"const value = Array.isArray(d) ? d[0].id : d.id",
-									"pm.environment.set(\"flowID\", value)"
+									"const flow = Array.isArray(d) ? d[0] : d",
+									"const value = flow.id",
+									"const slug = flow.slug",
+									"pm.environment.set(\"flowID\", value)",
+									"pm.environment.set(\"flowSlug\", slug)",
+									"tests[\"[INFO] Response: \" + JSON.stringify(flow,null,\"\\t\")] = true"
 								],
 								"type": "text/javascript"
 							}
@@ -3300,8 +3304,16 @@
 								"exec": [
 									"const json = pm.response.json()",
 									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-									"const value = Array.isArray(d) ? d[0].id : d.id",
-									"pm.environment.set(\"fieldID\", value)"
+									"if(Array.isArray(d)){",
+									"for (i = 0; i < d.length; i++){",
+									"const field = d[i]",
+									"const value = field.id",
+									"if (i == 0) pm.environment.set(\"fieldID\", value)",
+									"tests[\"[INFO] Response: \" + JSON.stringify(field,null,\"\\t\")] = true",
+									"}} else {",
+									"const value = d.id",
+									"pm.environment.set(\"fieldID\", value)",
+									"tests[\"[INFO] Response: \" + JSON.stringify(product,null,\"\\t\")] = true }"
 								],
 								"type": "text/javascript"
 							}
@@ -3411,10 +3423,12 @@
 								"exec": [
 									"const json = pm.response.json()",
 									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-									"const value = Array.isArray(d) ? d[0].id : d.id",
-									"const slug = Array.isArray(d) ? d[0].slug : d.slug",
+									"const field = Array.isArray(d) ? d[0] : d",
+									"const value = field.id",
+									"const slug = field.slug",
 									"pm.environment.set(\"fieldID\", value)",
-									"pm.environment.set(\"fieldSlug\", slug)"
+									"pm.environment.set(\"fieldSlug\", slug)",
+									"tests[\"[INFO] Response: \" + JSON.stringify(field,null,\"\\t\")] = true"
 								],
 								"type": "text/javascript"
 							}
