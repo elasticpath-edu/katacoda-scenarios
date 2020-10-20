@@ -43,10 +43,10 @@
       }
     },
     "environment": {
+          "showdashboard": true,
+          "dashboards": [{"name": "Dashboard", "href": "https://dashboard.elasticpath.com"}],
           "uieditorpath": "/root/environment.json",
-          "showide": true,
-          "idePort": 23000,
-          "uilayout": "terminal"
+          "uilayout": "vscode-terminal-split"
     },
     "backend": {
       "imageid": "nodejs:12"
