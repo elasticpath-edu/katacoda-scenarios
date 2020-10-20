@@ -45,7 +45,8 @@
     "environment": {
           "uieditorpath": "/root/environment.json",
           "showide": true,
-          "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nLet's work with Flows.\u001b[m\r\n"
+          "idePort": 23000,
+          "uilayout": "terminal"
     },
     "backend": {
       "imageid": "nodejs:12"
