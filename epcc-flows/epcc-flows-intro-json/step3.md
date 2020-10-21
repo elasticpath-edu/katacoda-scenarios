@@ -6,11 +6,7 @@ Complete the following steps to create a custom Flow:
 
 * Open the `Create a flow` request and replace the contents in the `Body` section with:
 
-<pre class="file" data-filename="collection.json" data-target="insert" data-marker="#INSERT-BODY">
-{\n  \"data\": {\n    \"type\": \"flow\",\n    \"name\": \"Wishlists\",\n    \"slug\": \"wishlists\",\n    \"description\": \"Allow customers to store products they want to purchase at a later date\",\n    \"enabled\": true\n  }\n}
-</pre>
-
-```json
+<pre class="file" data-filename="collection.json" data-target="insert" data-marker="#FLOW-BODY">
 {
     "data": {
     "type": "flow",
@@ -20,7 +16,7 @@ Complete the following steps to create a custom Flow:
     "enabled": true
     }
 }
-```
+</pre>
 
 * Send the request to create a flow and return the flow ID and slug that will be saved in `flowID` and `flowSlug` environment variables by the script.
 

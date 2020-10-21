@@ -3125,7 +3125,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "#INSERT-BODY"
+							"raw": "#FLOW-BODY"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/flows",
