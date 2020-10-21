@@ -996,7 +996,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"data\": {\n    \"type\": \"field\",\n    \"name\": \"Product Rating\",\n    \"slug\": \"product-rating\",\n    \"field_type\": \"integer\",\n    \"validation_rules\": [\n      {\n        \"type\": \"between\",\n        \"options\": {\n          \"from\": 1,\n          \"to\": 5\n        }\n      }\n    ],\n    \"description\": \"Average rating as given by our users\",\n    \"required\": false,\n    \"default\": 0,\n    \"enabled\": true,\n    \"order\": 1,\n    \"relationships\": {\n      \"flow\": {\n        \"data\": {\n          \"type\": \"flow\",\n          \"id\": \"{{flowID}}\"\n        }\n      }\n    }\n  }\n}"
+							"raw": "#FIELD-DATA"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/fields",
@@ -1142,7 +1142,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"data\": {\n    \"type\": \"entry\",\n    \"FIELD_SLUG\": \"a value\"\n  }\n}"
+							"raw": "#ENTRY-DATA"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/flows/{{flowSlug}}/entries",
@@ -1391,7 +1391,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"data\": [\n    {\n      \"type\": \"{RESOURCE_TYPE}\",\n      \"id\": \"{RESOURCE_ID}\"\n    },\n    {\n      \"type\": \"{RESOURCE_TYPE}\",\n      \"id\": \"{RESOURCE_ID}\"\n    }\n  ]\n}"
+							"raw": "#ENTRY-REL-DATA"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/flows/{{flowSlug}}/entries/{{entryID}}/relationships/{{fieldSlug}}",
@@ -1597,7 +1597,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"data\": {\n    \"type\": \"product\",\n    \"name\": \"Desk lamp\",\n    \"slug\": \"desk-lamp\",\n    \"sku\": \"desk-lamp-001\",\n    \"manage_stock\": false,\n    \"description\": \"A cool desk lamp\",\n    \"status\": \"live\",\n    \"commodity_type\": \"physical\",\n    \"price\": [\n      {\n        \"amount\": 10000,\n        \"currency\": \"GBP\",\n        \"includes_tax\": true\n      }\n    ]\n  }\n}"
+							"raw": "#PRODUCT-BODY"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/products",
