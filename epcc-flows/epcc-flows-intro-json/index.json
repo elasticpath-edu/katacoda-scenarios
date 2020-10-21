@@ -45,7 +45,6 @@
     "environment": {
           "showdashboard": true,
           "dashboards": [{"name": "Dashboard", "href": "https://dashboard.elasticpath.com"}],
-          "uieditorpath": "/root/environment.json",
           "uilayout": "editor-terminal"
     },
     "backend": {
