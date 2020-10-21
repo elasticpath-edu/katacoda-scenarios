@@ -6,6 +6,10 @@ Complete the following steps to create a custom Flow:
 
 * Open the `Create a flow` request and replace the contents in the `Body` section with:
 
+<pre class="file" data-filename="collection.json" data-target="insert" data-marker="#INSERT-BODY">
+"raw": "{\n  \"data\": {\n    \"type\": \"flow\",\n    \"name\": \"Wishlists\",\n    \"slug\": \"wishlists\",\n    \"description\": \"Allow customers to store products they want to purchase at a later date\",\n    \"enabled\": true\n  }\n}"
+</pre>
+
 ```json
 {
     "data": {

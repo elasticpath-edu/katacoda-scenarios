@@ -3125,7 +3125,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"data\": {\n    \"type\": \"flow\",\n    \"name\": \"Products\",\n    \"slug\": \"products\",\n    \"description\": \"Extends the default product object\",\n    \"enabled\": true\n  }\n}"
+							#INSERT-BODY
 						},
 						"url": {
 							"raw": "{{baseUrl}}/flows",
