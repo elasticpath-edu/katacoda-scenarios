@@ -44,8 +44,10 @@
     },
     "environment": {
           "showdashboard": true,
-          "hidehiddenfiles": true,
+          "hideHiddenFiles": true,
           "dashboards": [{"name": "Dashboard", "href": "https://dashboard.elasticpath.com"}],
+          "delayToSaveFileAfterStopTypingMilliseconds": 2000,
+          "autoFormatEnable": true,
           "uilayout": "editor-terminal"
     },
     "backend": {
