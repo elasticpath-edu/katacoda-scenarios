@@ -4,109 +4,70 @@ In this step, you will extend a core Flow `customers` to extend the Customer wit
 
 Check if you already have a Flow for the core resource `customer`.
 
-* In Postman, open the `Get all fields on a flow` request from `flows` folder.
-* Replace the Flow slug to `customers` as below.
-![Customers Flow](images/flow-customers-get-postman.png)
-* Click `Send`
+* Open the collection in the editor:
 
->If the `customers` Flow already exists, you must add the returned `id` and the `slug` of the flow in new variables called `customersFlowID` and `customersFlowSlug` respectively, and skip the rest of this step.
+`/root/epcc-flows.json`{{open}}
 
-![Customers Flow Variables](images/customers-flow-variables.png)
+* Explore the `Get all fields on customer flow` request.
+* Send the request to get all fields on the `customers` flow, if it exists.
 
->If you get `Flow not found` error, continue as normal to create `customers` flow.
+`newman run epcc-flows.json --folder "Get all fields on customer flow" -e environment.json --verbose --export-environment environment.json`{{execute}}
 
->You can get a list of all flows, IDs and slugs, by sending a GET request `Get all flows` in Postman.
+>If the `customers` flow already exists, it is returned. You should open the environment file and replace `null` to update environment variables named `customersFlowID` and `customersFlowSlug`.
+`environment.json`{{open}}
 
-Complete the following steps to extend the customers entity:
+If last command returned with `Flow not found` error, complete the following steps to extend the customers entity:
 
-* In Postman, Open the `Create a flow` request.
-* Replace the contents in the `Body` section with:
+* Open the collection in the editor:
 
-```json
-{
-  "data": {
-    "type": "flow",
-    "name": "Customers",
-    "slug": "customers",
-    "description": "Extends the default customer object",
-    "enabled": true
-  }
-}
-```
+`/root/epcc-flows.json`{{open}}
 
-* Replace the contents in the `Tests` section with:
+* Open the `Create a customer flow` request and replace the contents in the `Body` section with:
 
-```js
-const json = pm.response.json()
-const d = json.hasOwnProperty("data") ? json.data : json
-const id = Array.isArray(d) ? d[0].id : d.id
-const slug = Array.isArray(d) ? d[0].slug : d.slug
-pm.environment.set("customersFlowID", id)
-pm.environment.set("customersFlowSlug", slug)
-```
+<pre class="file" data-filename="epcc-flows.json" data-target="insert" data-marker="#CUST-FLOW-BODY">
+{\"data\": {\"type\": \"flow\",\"name\": \"Customers\",\"slug\": \"customers\",\"description\": \"Extends the default customer object\",\"enabled\": true}}
+</pre>
 
-* Click `Send`
+* Send the request to create a flow and return the flow ID and slug that will be saved in `customersFlowID` and `customersFlowSlug` environment variables by the test script.
+
+`newman run epcc-flows.json --folder "Create a customer flow" -e environment.json --verbose --export-environment environment.json`{{execute}}
 
 ### Add Fields to the Customers Flow
 
 Now, create a new Field of relationship type to link a customer to wishlists:
 
-* In Postman, open the `Create a field` request.
-* Replace the contents in the `body` section with:
+* Open the collection in the editor:
 
-```json
-{
-    "data": {
-        "type": "field",
-        "name": "Wishlists",
-        "slug": "wishlists",
-        "field_type": "relationship",
-        "validation_rules": [{
-            "type": "one-to-many",
-            "to": "wishlists"
-        }],
-        "description": "Customers wishlists",
-        "unique": false,
-        "enabled": true,
-        "required": false,
-        "relationships": {
-            "flow": {
-                "data": {
-                    "type": "flow",
-                    "id": "{{customersFlowID}}"
-                }
-            }
-        }
-    }
-}
-```
+`/root/epcc-flows.json`{{open}}
 
-* Replace the contents in the `Tests` section with:
+* Open the `Create a wishlist field` request and replace the contents in the `Body` section with:
 
-```
-const json = pm.response.json()
-const d = json.hasOwnProperty("data") ? json.data : json
-const id = Array.isArray(d) ? d[0].id : d.id
-const slug = Array.isArray(d) ? d[0].slug : d.slug
-pm.environment.set("wishlistFieldID", id)
-pm.environment.set("wishlistFieldSlug", slug)
-```
+<pre class="file" data-filename="epcc-flows.json" data-target="insert" data-marker="#WISH-FIELD-BODY">
+{\"data\": {\"type\": "\field\","\name\": "\Wishlists\","\slug\": "\wishlists\","\field_type\": "\relationship\","\validation_rules\": [{"\type\": "\one-to-many\","\to\": "\wishlists\"}],"\description\": "\Customers wishlists\","\unique\": false,"\enabled\": true,"\required\": false,"\relationships\": {"\flow\": {"\data\": {"\type\": "\flow\","\id\": "\{{customersFlowID}}\"}}}}}
+</pre>
 
-* Click `Send`
+* Send the request to create a field and return the field ID and the field slug that will be saved in `wishlistFieldID` and `wishlistFieldSlug`  environment variables respectively by the test script.
+
+`newman run epcc-flows.json --folder "Create a wishlist field" -e environment.json --verbose --export-environment environment.json`{{execute}}
 
 ### Create a New Customer
 
-* In Postman, open the `Create a customer` request from `customers` folder.
-* Replace the data in the `Body` section with **your info**.
-* Click `Send` to create a new customer Entry.
+* Open the collection in the editor:
+
+`/root/epcc-flows.json`{{open}}
+
+* Open the `Create a customer` request and replace the data in the `Body` section with **your info**.
+* Send the request to create a customer and return the customer ID to be saved in `customerID` environment variable by the test script.
+
+`newman run epcc-flows.json --folder "Create a customer" -e environment.json --verbose --export-environment environment.json`{{execute}}
+
 
 ### Get a Customer's Wishlist
 
-You’ve added a `wishlists` Field to the customer resource, so when you make the API call to get a customer, you must see the wishlist(s) directly on the customer data object.
+Now, that you’ve added a `wishlists` Field to the customer resource, when you make the API call to get a customer, you must see the wishlist(s) directly on the customer data object.
 
-* In Postman, open the `Get a customer` request from `customers` folder.
-* Click `Send`.
+* Send the `Get a customer` request to get the customer.
 
->Wishlist Field must have `null` as the value. Don't worry, you will create entries in the next exercise.
+`newman run epcc-flows.json --folder "Get a customer" -e environment.json --verbose`{{execute}}
 
-[Next: Link a customer to a wishlist](./core-flow-entries.md)
+> Wishlist Field must have `null` as the value. Don't worry, you will create entries in the next exercise.

@@ -1,6 +1,4 @@
-### Get a Customers Wishlists
-
-Check the `customer` resource to confirm that the wishlist(s) are returned directly on the data object.
+Let's check the `customer` resource to confirm that the wishlist(s) are returned directly on the data object.
 
 * Open the `Get a customer` request from `customers` folder.
 * Add a new query parameter in `Params` section with `include` as the key and `wishlists` as the value.

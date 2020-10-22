@@ -15,30 +15,6 @@
       {
         "title": "Create a Flow (Custom Resource)",
         "text": "step3.md"
-      },
-      {
-        "title": "Create a Field",
-        "text": "step4.md"
-      },
-      {
-        "title": "Create an Entry",
-        "text": "step5.md"
-      },
-      {
-        "title": "Create a Relationship Entry",
-        "text": "step6.md"
-      },
-      {
-        "title": "Extend a Core Flow",
-        "text": "step7.md"
-      },
-      {
-        "title": "Relate Core Object to the Extension",
-        "text": "step8.md"
-      },
-      {
-        "title": "Verify the Wishlist",
-        "text": "step9.md"
       }
     ],
       "intro": {
@@ -59,12 +35,10 @@
       }
     },
     "environment": {
-          "showdashboard": true,
           "hideHiddenFiles": true,
-          "dashboards": [{"name": "Dashboard", "href": "https://dashboard.elasticpath.com"}],
           "delayToSaveFileAfterStopTypingMilliseconds": 2000,
           "autoFormatEnable": true,
-          "uilayout": "editor-terminal"
+          "uilayout": "vscode-terminal-split"
     },
     "backend": {
       "imageid": "nodejs:12"

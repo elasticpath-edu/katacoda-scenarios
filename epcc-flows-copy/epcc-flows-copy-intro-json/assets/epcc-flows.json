@@ -674,70 +674,6 @@
 					"response": []
 				},
 				{
-				"name": "Create a customer flow",
-				"event": [
-					{
-						"type": "text/javascript",
-						"listen": "test",
-						"script": {
-							"id": "a64195c8-04ac-48c1-853e-879be0e49e7e",
-							"exec": [
-								"const json = pm.response.json()",
-								"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-								"const flow = Array.isArray(d) ? d[0] : d",
-								"const value = flow.id",
-								"const slug = flow.slug",
-								"pm.environment.set(\"customersFlowID\", value)",
-								"pm.environment.set(\"customersFlowSlug\", slug)",
-								"tests[\"[INFO] Response: \" + JSON.stringify(flow,null,\"\\t\")] = true"
-							],
-							"type": "text/javascript"
-						}
-					}
-				],
-				"request": {
-					"auth": {
-						"type": "bearer",
-						"bearer": [
-							{
-								"key": "token",
-								"value": "{{accessToken}}",
-								"type": "string"
-							}
-						]
-					},
-					"method": "POST",
-					"header": [
-						{
-							"key": "accept",
-							"value": "application/json"
-						},
-						{
-							"key": "content-type",
-							"value": "application/json"
-						},
-						{
-							"key": "x-moltin-auth-store",
-							"value": "{{storeID}}"
-						}
-					],
-					"body": {
-						"mode": "raw",
-						"raw": "#CUST-FLOW-BODY"
-					},
-					"url": {
-						"raw": "{{baseUrl}}/flows",
-						"host": [
-							"{{baseUrl}}"
-						],
-						"path": [
-							"flows"
-						]
-					}
-				},
-				"response": []
-				},
-				{
 					"name": "Update a flow",
 					"request": {
 						"auth": {
@@ -911,85 +847,7 @@
 									"}} else {",
 									"const value = d.id",
 									"pm.environment.set(\"fieldID\", value)",
-									"tests[\"[INFO] Response: \" + JSON.stringify(field,null,\"\\t\")] = true }"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "accept",
-								"value": "application/json"
-							},
-							{
-								"key": "content-type",
-								"value": "application/json"
-							},
-							{
-								"key": "x-moltin-auth-store",
-								"value": "{{storeID}}"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/flows/{{flowSlug}}/fields",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"flows",
-								"{{flowSlug}}",
-								"fields"
-							],
-							"query": [
-								{
-									"key": "page[offset]",
-									"value": "0",
-									"disabled": true
-								},
-								{
-									"key": "page[limit]",
-									"value": "10",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get all fields on customer flow",
-					"event": [
-						{
-							"type": "text/javascript",
-							"listen": "test",
-							"script": {
-								"id": "deb5a68d-cad6-401f-a9cb-cad2b188e489",
-								"exec": [
-									"const json = pm.response.json()",
-									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-									"if(Array.isArray(d)){",
-									"for (i = 0; i < d.length; i++){",
-									"const field = d[i]",
-									"const value = field.id",
-									"if (i == 0) pm.environment.set(\"fieldID\", value)",
-									"tests[\"[INFO] Response: \" + JSON.stringify(field,null,\"\\t\")] = true",
-									"}} else {",
-									"const value = d.id",
-									"pm.environment.set(\"fieldID\", value)",
-									"tests[\"[INFO] Response: \" + JSON.stringify(field,null,\"\\t\")] = true }"
+									"tests[\"[INFO] Response: \" + JSON.stringify(product,null,\"\\t\")] = true }"
 								],
 								"type": "text/javascript"
 							}
@@ -1138,71 +996,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "#FIELD-BODY"
-						},
-						"url": {
-							"raw": "{{baseUrl}}/fields",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"fields"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Create a wishlist field",
-					"event": [
-						{
-							"type": "text/javascript",
-							"listen": "test",
-							"script": {
-								"id": "9362007d-dd7b-478a-89ad-5e0b1109bc33",
-								"exec": [
-									"const json = pm.response.json()",
-									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-									"const field = Array.isArray(d) ? d[0] : d",
-									"const value = field.id",
-									"const slug = field.slug",
-									"pm.environment.set(\"wishlistFieldID\", value)",
-									"pm.environment.set(\"wishlistFieldSlug\", slug)",
-									"tests[\"[INFO] Response: \" + JSON.stringify(field,null,\"\\t\")] = true"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "accept",
-								"value": "application/json"
-							},
-							{
-								"key": "content-type",
-								"value": "application/json"
-							},
-							{
-								"key": "x-moltin-auth-store",
-								"value": "{{storeID}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "#WISH-FIELD-BODY"
+							"raw": "#FIELD-DATA"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/fields",
@@ -1348,7 +1142,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "#ENTRY-BODY"
+							"raw": "#ENTRY-DATA"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/flows/{{flowSlug}}/entries",
@@ -1597,7 +1391,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "#ENTRY-REL-BODY"
+							"raw": "#ENTRY-REL-DATA"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/flows/{{flowSlug}}/entries/{{entryID}}/relationships/{{fieldSlug}}",
