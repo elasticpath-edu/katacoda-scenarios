@@ -95,9 +95,9 @@ With the custom Flow Entry, now you can associate products with a wishlist Entry
 {\"data\": [{\"type\": \"product\",\"id\": \"{{productID}}\"}]}
 </pre>
 
-`newman run epcc-flows.json --folder "Create an entry relationship" -e environment.json --verbose --export-environment environment.json`{{execute}}
-
 * Send the request to create a new entry relationship connecting the product to the wishlist.
+
+`newman run epcc-flows.json --folder "Create an entry relationship" -e environment.json --verbose --export-environment environment.json`{{execute}}
 
 >You can repeat these steps to add more products to the wishlist Entry. Use `Get all products` from `products` folder, to get a list of all the products.
 

@@ -1,5 +1,13 @@
 You can define custom data fields for the resources that you use in your store, such as adding more fields to the customer resource. You can also create new resources, such as a wishlist resource to support wishlists in your store. With Flows, you can apply Commerce Cloud to almost any use case.
 
+Flows was created because of the need to provide customization to Elastic Path Commerce Cloud. We understand that everyone has different needs and use cases, and it’s impossible to provide a solution that’s `one size fits all`.
+
+The platform is based around a collection of different microservices that cover the basics of a commerce platform. Each part of the system is extendable using flows or usable individually as is.
+
+We have ensured that the core concepts are as flexible and extensible as possible, giving you the ability to extend core objects with custom data and create new microservices that stand alone or can be related to other core objects.
+
+![When to use a flow](./assets/flows.png)
+
 ### Core vs. non-core Flow
 
 The table below describes main differences between core and non-core Flows.

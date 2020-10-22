@@ -1,6 +1,4 @@
-## Create a Wishlist with Flows
-
-In these exercises, you will learn about Flows and how to use Flows to extend and customize the data schema. You will be using the example scenario wherein you will create a *wishlist* resource and extend the *customer* resource to associate it with the *wishlist* resource.
+In this scenario, you will learn about Flows and how to use Flows to extend and customize the data schema. You will be using the example scenario wherein you will create a *wishlist* resource and extend the *customer* resource to associate it with the *wishlist* resource.
 
 ### Prerequisites
 

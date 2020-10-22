@@ -4,71 +4,17 @@ With core Flow created, you'll next create an Entry. Start with an empty Entry a
 
 With the new field `wishlists` in `customers` Flow, create a new relationship entry to associate the wishlist to the customer:
 
-* In Postman, create a new POST request with url `{{baseUrl}}/flows/{{customersFlowSlug}}/entries/{{customerID}}/relationships/{{wishlistFieldSlug}}` and `Body` as:
+* Open the collection in the editor:
 
-```json
-{
-  "data": [
-    {
-      "type": "wishlists",
-      "id": "{{entryID}}"
-    }
-  ]
-}
-```
+`/root/epcc-flows.json`{{open}}
 
-* Click `Send`
+* Open the `Create a customer entry relationship` request.
+* Replace the contents in the body section with:
 
-### Get a Customers Wishlists
+<pre class="file" data-filename="epcc-flows.json" data-target="insert" data-marker="#ENTRY-REL-CUST-BODY">
+{\"data\": [{\"type\": \"wishlists\",\"id\": \"{{entryID}}\"}]}
+</pre>
 
-Check the `customer` resource to confirm that the wishlist(s) are returned directly on the data object.
+* Send the request to create a new entry relationship connecting the customer to the wishlist.
 
-* Open the `Get a customer` request from `customers` folder.
-* Add a new query parameter in `Params` section with `include` as the key and `wishlists` as the value.
-* Click `Send`.
-
-The result should be something like:
-
-```json
-{
-  "data": {
-    "id": "c8c1c511-beef-4812-9b7a-9f92c587217c",
-    "type": "customer",
-    "name": "John Smith",
-    "email": "john@smith.com",
-    "password": true,
-    "relationships": [
-      ("wishlists": [
-        {
-          "type": "wishlist",
-          "id": "WISHLIST-ENTRY-ID"
-        }
-      ])
-    ],
-    "included": {
-      "wishlists": [
-        {
-          "id": "WISHLIST-ENTRY-ID",
-          "type": "entry",
-          "relationships": {
-            "products": {
-              "data": [
-                {
-                  "type": "product",
-                  "id": "ba9ba29d-06da-4ba9-9e2e-f0e776703324"
-                },
-                {
-                  "type": "product",
-                  "id": "394916e8-1d47-44a0-b5d0-a5a61b71bab8"
-                }
-              ]
-            }
-          }
-        }
-      ]
-    }
-  }
-}
-```
-
-That's it! You have created a new resourece called wishlist and you also extended the customer resource with wishlists field.
+`newman run epcc-flows.json --folder "Create a customer entry relationship" -e environment.json --verbose --export-environment environment.json`{{execute}}

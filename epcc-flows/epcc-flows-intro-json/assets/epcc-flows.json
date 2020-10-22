@@ -1617,6 +1617,55 @@
 					"response": []
 				},
 				{
+					"name": "Create a customer entry relationship",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-moltin-auth-store",
+								"value": "{{storeID}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "#ENTRY-REL-CUST-BODY"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/flows/{{customersFlowSlug}}/entries/{{customerID}}/relationships/{{wishlistFieldSlug}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"flows",
+								"{{customersFlowSlug}}",
+								"entries",
+								"{{customerID}}",
+								"relationships",
+								"{{wishlistFieldSlug}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Update an entry relationship",
 					"request": {
 						"auth": {
