@@ -1,12 +1,12 @@
 {
-    "title": "Elastic Path Commerce Cloud Training",
-    "description": "Learn and explore the features in Elastic Path Commerce Cloud with hands-on exercises in a live environment",
+    "title": "Elastic Path Commerce Cloud Training BETA",
+    "description": "Learn Katacoda",
     "icon": "fa-katacoda",
     "courses": [
       {
         "course_id": "epcc-flows-copy-intro-json",
-        "title": "Custom Data (Flows)",
-        "description": "Learn how to use Flows to create custom or extend existing resources in Elastic Path Commerce Cloud."
+        "title": "COPY Custom Data (Flows)",
+        "description": "Trying VS code."
       }
     ]
   }
