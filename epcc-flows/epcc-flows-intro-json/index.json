@@ -52,7 +52,7 @@
       "assets": {
         "client": [
           {
-            "file": "*",
+            "file": "*.json",
             "target": "/root"
           }
         ] 
@@ -61,7 +61,6 @@
     "environment": {
           "showdashboard": true,
           "hideHiddenFiles": true,
-          "exclusionPatterns": "/root/*.png",
           "dashboards": [{"name": "Dashboard", "href": "https://dashboard.elasticpath.com"}],
           "delayToSaveFileAfterStopTypingMilliseconds": 2000,
           "autoFormatEnable": true,
