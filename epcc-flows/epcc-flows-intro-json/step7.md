@@ -66,8 +66,8 @@ Now, create a new Field of relationship type to link a customer to wishlists:
 
 Now, that you’ve added a `wishlists` Field to the customer resource, when you make the API call to get a customer, you must see the wishlist(s) directly on the customer data object.
 
-* Send the `Get a customer` request to get the customer.
+* Send the `Get all customers` request to get the customer.
 
-`newman run epcc-flows.json --folder "Get a customer" -e environment.json `{{execute}}
+`newman run epcc-flows.json --folder "Get all customers" -e environment.json `{{execute}}
 
 > Wishlist Field must have `null` as the value. Don't worry, you will create entries in the next exercise.
