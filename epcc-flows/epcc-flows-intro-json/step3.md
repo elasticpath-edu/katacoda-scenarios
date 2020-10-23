@@ -60,7 +60,7 @@ Complete the following steps to create a custom Flow:
 
 * Open the collection in the editor:
 
-`/root/collection.json`{{open}}
+`/root/epcc-flows.json`{{open}}
 
 * Open the `Create a flow` request and replace the contents in the `Body` section with:
 

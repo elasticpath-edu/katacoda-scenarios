@@ -124,4 +124,4 @@ In this step, you will create a Field `products` to store the customers' desired
 
 You've created a custom resource with a relationship Field to store the product IDs. Next, send a GET request to get the resource and all fields on it:
 
-`newman run epcc-flows.json --folder "Get all fields on a flow" -e environment.json --verbose`{{execute}}
+`newman run epcc-flows.json --folder "Get all fields on a flow" -e environment.json`{{execute}}

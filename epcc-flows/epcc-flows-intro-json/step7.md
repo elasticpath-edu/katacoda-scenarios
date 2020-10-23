@@ -68,6 +68,6 @@ Now, that you’ve added a `wishlists` Field to the customer resource, when you 
 
 * Send the `Get a customer` request to get the customer.
 
-`newman run epcc-flows.json --folder "Get a customer" -e environment.json --verbose`{{execute}}
+`newman run epcc-flows.json --folder "Get a customer" -e environment.json `{{execute}}
 
 > Wishlist Field must have `null` as the value. Don't worry, you will create entries in the next exercise.
