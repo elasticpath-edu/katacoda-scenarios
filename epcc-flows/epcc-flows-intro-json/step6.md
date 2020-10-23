@@ -80,9 +80,9 @@ With the custom Flow Entry, now you can associate products with a wishlist Entry
 {\"data\": {\"type\": \"product\",\"name\" : \"Playtend Switch Controller Pro Slim\",\"slug\": \"playtend-switch-controller-pro-slim\", \"sku\": \"PSAL01-{COLOUR}-1\",\"manage_stock\": false,\"description\": \"Playtend Switch Controller Pro Slim\",\"status\" : \"live\",\"commodity_type\": \"physical\",\"price\": [{ \"amount\": 7000, \"currency\": \"USD\", \"includes_tax\": true}]}}
 </pre>
 
-`newman run epcc-flows.json --folder "Create a product" -e environment.json --verbose --export-environment environment.json`{{execute}}
-
 * Send the request to create a new product and return the product ID that will be saved in `productID` environment variable by the test script.
+
+`newman run epcc-flows.json --folder "Create a product" -e environment.json --export-environment environment.json`{{execute}}
 
 * Open the collection in the editor:
 
@@ -97,11 +97,11 @@ With the custom Flow Entry, now you can associate products with a wishlist Entry
 
 * Send the request to create a new entry relationship connecting the product to the wishlist.
 
-`newman run epcc-flows.json --folder "Create an entry relationship" -e environment.json --verbose --export-environment environment.json`{{execute}}
+`newman run epcc-flows.json --folder "Create an entry relationship" -e environment.json --export-environment environment.json`{{execute}}
 
 >You can repeat these steps to add more products to the wishlist Entry. Use `Get all products` from `products` folder, to get a list of all the products.
 
-`newman run epcc-flows.json --folder "Get all products" -e environment.json --verbose --export-environment environment.json`{{execute}}
+`newman run epcc-flows.json --folder "Get all products" -e environment.json --export-environment environment.json`{{execute}}
 
 ### Get all Wishlists
 

@@ -17,4 +17,4 @@ With the new field `wishlists` in `customers` Flow, create a new relationship en
 
 * Send the request to create a new entry relationship connecting the customer to the wishlist.
 
-`newman run epcc-flows.json --folder "Create a customer entry relationship" -e environment.json --verbose --export-environment environment.json`{{execute}}
+`newman run epcc-flows.json --folder "Create a customer entry relationship" -e environment.json --export-environment environment.json`{{execute}}

@@ -116,9 +116,9 @@ In this step, you will create a Field `products` to store the customers' desired
 \"validation_rules\": [{\"type\": \"one-to-many\",\"to\": \"products\"}],\"description\": \"Wishlist Products\",\"required\": false,\"enabled\": true,\"relationships\": {\"flow\": {\"data\": {\"type\": \"flow\",\"id\": \"{{flowID}}\"}}}}}
 </pre>
 
-`newman run epcc-flows.json --folder "Create a field" -e environment.json --verbose --export-environment environment.json`{{execute}}
-
 * Send the request to create a field and return the field ID and field slug that will be saved in `fieldID` and `fieldSlug` environment variables by the script.
+
+`newman run epcc-flows.json --folder "Create a field" -e environment.json --export-environment environment.json`{{execute}}
 
 ### Get the Wishlist Fields
 

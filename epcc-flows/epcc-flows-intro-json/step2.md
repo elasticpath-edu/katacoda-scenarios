@@ -6,7 +6,7 @@ In this exercise, you will attempt to access an API endpoint without authorizati
 
 `/root/epcc-flows.json`{{open}}
 
-* Explore the `Get all products` request under `products` folder.
+* Search and explore the `Get all products` request.
 * Send the request and you should receive a 401 error like the following: 
 
 `newman run epcc-flows.json --folder "Get all products" -e environment.json`{{execute}}

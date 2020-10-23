@@ -70,6 +70,6 @@ Complete the following steps to create a custom Flow:
 
 * Send the request to create a flow and return the flow ID and slug that will be saved in `flowID` and `flowSlug` environment variables by the script.
 
-`newman run epcc-flows.json --folder "Create a flow" -e environment.json --verbose --export-environment environment.json`{{execute}}
+`newman run epcc-flows.json --folder "Create a flow" -e environment.json --export-environment environment.json`{{execute}}
 
 

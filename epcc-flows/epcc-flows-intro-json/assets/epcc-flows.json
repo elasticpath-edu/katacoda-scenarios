@@ -187,8 +187,17 @@
 								"exec": [
 									"const json = pm.response.json()",
 									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-									"const value = Array.isArray(d) ? d[0].id : d.id",
-									"pm.environment.set(\"customerID\", value)"
+									"if(Array.isArray(d)){",
+									"for (i = 0; i < d.length; i++){",
+									"const customer = d[i]",
+									"const value = customer.id",
+									"if (i == 0) {",
+									"pm.environment.set(\"customerID\", value)",
+									"tests[\"[INFO] Response: \" + JSON.stringify(customer,null,\"\\t\")] = true",
+									"}} else {",
+									"const value = d.id",
+									"pm.environment.set(\"customerID\", value)",
+									"tests[\"[INFO] Response: \" + JSON.stringify(d,null,\"\\t\")] = true }"
 								],
 								"type": "text/javascript"
 							}
@@ -509,10 +518,21 @@
 								"exec": [
 									"const json = pm.response.json()",
 									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-									"const value = Array.isArray(d) ? d[0].id : d.id",
-									"const slug = Array.isArray(d) ? d[0].slug : d.slug",
+									"if(Array.isArray(d)){",
+									"for (i = 0; i < d.length; i++){",
+									"const flow = d[i]",
+									"const value = flow.id",
+									"const slug = flow.slug",
+									"if (i == 0) {",
 									"pm.environment.set(\"flowID\", value)",
-									"pm.environment.set(\"flowSlug\", slug)"
+									"pm.environment.set(\"flowSlug\", slug)}",
+									"tests[\"[INFO] Response: \" + JSON.stringify(flow,null,\"\\t\")] = true",
+									"}} else {",
+									"const value = d.id",
+									"const slug = d.slug",
+									"pm.environment.set(\"flowID\", value)",
+									"pm.environment.set(\"flowSlug\", slug)}",
+									"tests[\"[INFO] Response: \" + JSON.stringify(d,null,\"\\t\")] = true }"
 								],
 								"type": "text/javascript"
 							}
@@ -906,12 +926,17 @@
 									"for (i = 0; i < d.length; i++){",
 									"const field = d[i]",
 									"const value = field.id",
-									"if (i == 0) pm.environment.set(\"fieldID\", value)",
+									"const slug = field.slug",
+									"if (i == 0) {",
+									"pm.environment.set(\"fieldID\", value)",
+									"pm.environment.set(\"fieldSlug\", slug)}",
 									"tests[\"[INFO] Response: \" + JSON.stringify(field,null,\"\\t\")] = true",
 									"}} else {",
 									"const value = d.id",
+									"const slug = d.slug",
 									"pm.environment.set(\"fieldID\", value)",
-									"tests[\"[INFO] Response: \" + JSON.stringify(field,null,\"\\t\")] = true }"
+									"pm.environment.set(\"fieldSlug\", slug)}",
+									"tests[\"[INFO] Response: \" + JSON.stringify(d,null,\"\\t\")] = true }"
 								],
 								"type": "text/javascript"
 							}
@@ -984,12 +1009,17 @@
 									"for (i = 0; i < d.length; i++){",
 									"const field = d[i]",
 									"const value = field.id",
-									"if (i == 0) pm.environment.set(\"fieldID\", value)",
+									"const slug = field.slug",
+									"if (i == 0) {",
+									"pm.environment.set(\"customersFieldID\", value)",
+									"pm.environment.set(\"customersFieldSlug\", slug)}",
 									"tests[\"[INFO] Response: \" + JSON.stringify(field,null,\"\\t\")] = true",
 									"}} else {",
 									"const value = d.id",
-									"pm.environment.set(\"fieldID\", value)",
-									"tests[\"[INFO] Response: \" + JSON.stringify(field,null,\"\\t\")] = true }"
+									"const slug = d.slug",
+									"pm.environment.set(\"customersFieldID\", value)",
+									"pm.environment.set(\"customersFieldSlug\", slug)}",
+									"tests[\"[INFO] Response: \" + JSON.stringify(d,null,\"\\t\")] = true }"
 								],
 								"type": "text/javascript"
 							}
@@ -1022,13 +1052,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/flows/{{flowSlug}}/fields",
+							"raw": "{{baseUrl}}/flows/customers/fields",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"flows",
-								"{{flowSlug}}",
+								"customers",
 								"fields"
 							],
 							"query": [
@@ -1508,8 +1538,17 @@
 								"exec": [
 									"const json = pm.response.json()",
 									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-									"const value = Array.isArray(d) ? d[0].id : d.id",
-									"pm.environment.set(\"entryID\", value)"
+									"if(Array.isArray(d)){",
+									"for (i = 0; i < d.length; i++){",
+									"const entry = d[i]",
+									"const value = entry.id",
+									"if (i == 0) {",
+									"pm.environment.set(\"entryID\", value)",
+									"tests[\"[INFO] Response: \" + JSON.stringify(entry,null,\"\\t\")] = true",
+									"}} else {",
+									"const value = d.id",
+									"pm.environment.set(\"entryID\", value)",
+									"tests[\"[INFO] Response: \" + JSON.stringify(d,null,\"\\t\")] = true }"
 								],
 								"type": "text/javascript"
 							}
@@ -1963,10 +2002,17 @@
 								"exec": [
 									"const json = pm.response.json()",
 									"const d = json.hasOwnProperty(\"data\") ? json.data : json",
-									"const product = Array.isArray(d) ? d[0] : d",
+									"if(Array.isArray(d)){",
+									"for (i = 0; i < d.length; i++){",
+									"const product = d[i]",
 									"const value = product.id",
+									"if (i == 0) {",
 									"pm.environment.set(\"productID\", value)",
-									"tests[\"[INFO] Response: \" + JSON.stringify(product,null,\"\\t\")] = true"
+									"tests[\"[INFO] Response: \" + JSON.stringify(product,null,\"\\t\")] = true",
+									"}} else {",
+									"const value = d.id",
+									"pm.environment.set(\"productID\", value)",
+									"tests[\"[INFO] Response: \" + JSON.stringify(d,null,\"\\t\")] = true }"
 								],
 								"type": "text/javascript"
 							}
