@@ -58,6 +58,9 @@
         ] 
       }
     },
+    "files": [
+        "epcc-flows.json","environment.json"
+    ],
     "environment": {
           "showdashboard": true,
           "hideHiddenFiles": true,
