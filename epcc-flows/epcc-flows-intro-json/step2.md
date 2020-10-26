@@ -20,7 +20,7 @@ You will be using the API key from your training store to create a new environme
 
 * Open the environment file:
 
-`environment.json`{{open}}
+`environment.json:22`{{open}}
 
 * Replace `XXX` to update environment variables named `clientID` and `clientSecret`.
 

@@ -97,3 +97,4 @@ With the custom Flow configured, next you will create an empty wishlist Entry an
 
 `newman run epcc-flows.json --folder "Create an entry" -e environment.json --export-environment environment.json`{{execute}}
 
+> In next step, you will create a relationship from this entry to the products.
