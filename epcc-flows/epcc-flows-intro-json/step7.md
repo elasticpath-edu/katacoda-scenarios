@@ -20,7 +20,7 @@ If last command returned with `Flow not found` error, complete the following ste
 
 <pre class="file" data-filename="collection.json" data-target="insert" data-marker="#CUST-FLOW-BODY">
 {\"data\": {\"type\": \"flow\",\"name\": \"Customers\",\"slug\": \"customers\",\"description\": \"Extends the default customer object\",\"enabled\": true}}
-</pre>collection
+</pre>
 
 * Send the request to create a flow and return the flow ID and slug that will be saved in `customersFlowID` and `customersFlowSlug` environment variables by the test script.
 
@@ -38,17 +38,17 @@ Now, create a new Field of relationship type to link a customer to wishlists:
 </pre>
 
 * Send the request to create a field and return the field ID and the field slug that will be saved in `wishlistFieldID` and `wishlistFieldSlug`  environment variables respectively by the test script.
-collection
+
 `newman run collection.json --folder "Create a wishlist field" -e environment.json --export-environment environment.json`{{execute}}
 
 ### Create a New Customer
-collection
+
 * Open the collection in the editor
 * Open the `Create a customer` request and replace the data in the `Body` section with **your info**
 * Send the request to create a customer and save the customer ID in the environment variable `customerID`:
 
 `newman run collection.json --folder "Create a customer" -e environment.json --export-environment environment.json`{{execute}}
-collection
+
 
 ### Get a Customer's Wishlist
 

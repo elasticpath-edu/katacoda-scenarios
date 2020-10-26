@@ -111,14 +111,14 @@ In this step, you will create a Field `products` to store the customers' desired
 <pre class="file" data-filename="collection.json" data-target="insert" data-marker="#FIELD-BODY">
 {\"data\": {\"type\": \"field\",\"name\": \"Products\",\"slug\": \"products\",\"field_type\": \"relationship\",
 \"validation_rules\": [{\"type\": \"one-to-many\",\"to\": \"products\"}],\"description\": \"Wishlist Products\",\"required\": false,\"enabled\": true,\"relationships\": {\"flow\": {\"data\": {\"type\": \"flow\",\"id\": \"{{flowID}}\"}}}}}
-</pre>collection
+</pre>
 
 * Send the request to create a field and return the field ID and field slug that will be saved in `fieldID` and `fieldSlug` environment variables by the script.
 
 `newman run collection.json --folder "Create a field" -e environment.json --export-environment environment.json`{{execute}}
 
 ### Get the Wishlist Fields
-collection
+
 You've created a custom resource with a relationship Field to store the product IDs. Next, send a GET request to get the resource and all fields on it:
 
-`newman run collection.json --folder "Get all fields on a flow" -e environment.json`{{execute}}collection
+`newman run collection.json --folder "Get all fields on a flow" -e environment.json`{{execute}}

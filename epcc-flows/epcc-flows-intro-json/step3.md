@@ -64,10 +64,7 @@ Complete the following steps to create a custom Flow:
 <pre class="file" data-filename="collection.json" data-target="insert" data-marker="#FLOW-BODY">
 {\"data\": {\"type\": \"flow\",\"name\": \"Wishlists\",\"slug\": \"wishlists\",\"description\": \"Allow customers to store products they want to purchase at a later date\",\"enabled\": true}}
 </pre>
-collection
+
 * Send the request to create a flow and return the flow ID and slug that will be saved in `flowID` and `flowSlug` environment variables by the script.
 
 `newman run collection.json --folder "Create a flow" -e environment.json --export-environment environment.json`{{execute}}
-
-
-collection

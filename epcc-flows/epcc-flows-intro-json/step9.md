@@ -7,7 +7,7 @@ Let's check the `customer` resource to confirm that the wishlist(s) are returned
 `newman run collection.json --folder "Get all customers" -e environment.json`{{execute}}
 
 The result should be something like:
-collection
+
 ```json
 {
   "data": {

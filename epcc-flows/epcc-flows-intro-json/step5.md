@@ -89,9 +89,9 @@ With the custom Flow configured, next you will create an empty wishlist Entry an
 <pre class="file" data-filename="collection.json" data-target="insert" data-marker="#ENTRY-BODY">
 {\"data\": {\"type\": \"entry\"}}
 </pre>
-collection
+
 * Send the request to create an empty entry and return the entry ID to be saved in `entryID` environment variable by the test script.
 
 `newman run collection.json --folder "Create an entry" -e environment.json --export-environment environment.json`{{execute}}
 
-> In next step, you will create a relationship from this entry to the products.collection
+> In next step, you will create a relationship from this entry to the products.

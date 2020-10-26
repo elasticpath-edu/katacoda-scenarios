@@ -2,3 +2,5 @@ Congratulations! You have created a new resourece called wishlist and you also e
 
 ## Lessons Learned
 
+1. How to extend a resource using core flow
+2. How to create a new resource using non-core flow
