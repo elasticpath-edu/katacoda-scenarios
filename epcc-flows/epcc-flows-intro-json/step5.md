@@ -8,13 +8,15 @@ In database terms, you can think of Flows as tables, Fields as columns, and Entr
 |type|	string|	Represents the type of object being returned.|
 |fieldSlug|	mixed|	There can be a :fieldSlug attribute for each field attached to the flow. The type depends on the field type.|
 
-#### GET - Get all Entries
+
+##### GET - Get all Entries
 
 ```url
 https://api.moltin.com/v2/flows/:slug/entries
 ```
 
-#### GET - Get an Entry
+
+##### GET - Get an Entry
 
 ```url
 https://api.moltin.com/v2/flows/:slug/entries/:id
@@ -25,7 +27,8 @@ https://api.moltin.com/v2/flows/:slug/entries/:id
 |id|	Required|	string|	The ID of the entry you’re updating.|
 |slug|	Required|	string|	The slug for the flow you are requesting an entry for.|
 
-#### POST - Create an Entry
+
+##### POST - Create an Entry
 
 ```url
 https://api.moltin.com/v2/flows/:slug/entries
@@ -44,7 +47,8 @@ https://api.moltin.com/v2/flows/:slug/entries
 |type|	Required|	string|	This is always entry.|
 |:fieldSlug|	Required| string|	The field slug for each field on this flow along with the corresponding value for this entry.|
 
-#### PUT - Update a Entry
+
+##### PUT - Update a Entry
 
 ```url
 https://api.moltin.com/v2/flows/:slug/entries/:id
@@ -65,7 +69,8 @@ https://api.moltin.com/v2/flows/:slug/entries/:id
 |:fieldSlug|	Required| string|	The field slug for each field on this flow along with the corresponding value for this entry.|
 |entryID| Required| string| The ID of the entry|
 
-#### DELETE - Delete an Entry
+
+##### DELETE - Delete an Entry
 
 ```url
 https://api.moltin.com/v2/flows/:slug/entries/:id
@@ -75,6 +80,7 @@ https://api.moltin.com/v2/flows/:slug/entries/:id
 |--------|----------|----------|----------|
 |slug|	Required|	string|	The slug for the Flow you are requesting an Entry for.|
 |id|	Required|	string|	The ID of the entry you are updating.|
+
 
 ## Create an Entry in the Custom Flow (Wishlist)
 

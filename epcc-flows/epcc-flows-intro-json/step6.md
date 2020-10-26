@@ -1,6 +1,7 @@
 When you create a field that uses relationship as a field_type, you update your entry values using the Relationship endpoints.
 
-#### POST - Create Entry Relationship
+
+##### POST - Create Entry Relationship
 
 ```url
 https://api.moltin.com/v2/flows/:flowSlug/entries/:entryId/relationships/:fieldSlug
@@ -24,7 +25,8 @@ Create an Entry relationship to one or more resources. If any relationships alre
 |data.type|	Optional|	string|	Represents the resource type of the object.|
 |data.id|	Optional|	string|	Data to be stored.|
 
-#### PUT - Update Entry Relationship
+
+##### PUT - Update Entry Relationship
 
 ```url
 https://api.moltin.com/v2/flows/:flowSlug/entries/:entryId/relationships/:fieldSlug
@@ -48,7 +50,8 @@ Replace the relationships between an entry and a resource. Unlike a POST to this
 |data.type|	Optional|	string|	Represents the resource type of the object.|
 |data.id|	Optional|	string|	Data to be stored.|
 
-#### DELETE - Delete Entry Relationship
+
+##### DELETE - Delete Entry Relationship
 
 ```url
 https://api.moltin.com/v2/flows/:flowSlug/entries/:entryId/relationships/:fieldSlug
