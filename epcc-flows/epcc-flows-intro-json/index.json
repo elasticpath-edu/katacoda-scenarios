@@ -59,7 +59,7 @@
       }
     },
     "files": [
-        "epcc-flows.json","environment.json"
+        "/root/epcc-flows.json","/root/environment.json"
     ],
     "environment": {
           "showdashboard": true,
@@ -67,7 +67,9 @@
           "dashboards": [{"name": "Dashboard", "href": "https://dashboard.elasticpath.com"}],
           "delayToSaveFileAfterStopTypingMilliseconds": 2000,
           "autoFormatEnable": true,
-          "uilayout": "editor-terminal"
+          "uilayout": "editor-terminal",
+          "uisettings": "javascript",
+          "uieditorpath": "/root/"
     },
     "backend": {
       "imageid": "nodejs:12"
