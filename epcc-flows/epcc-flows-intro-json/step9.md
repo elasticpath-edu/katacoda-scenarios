@@ -1,7 +1,7 @@
 Let's check the `customer` resource to confirm that the wishlist(s) are returned directly on the data object.
 
 * Open the collection in the editor
-* Open the `Get all customers` request. Add a param `include=wishlists` to the request
+* Open the `Get all customers` request. Make sure there is a query parameter `?include=wishlists` in the request
 * Send the GET request for the customer
 
 `newman run collection.json --folder "Get all customers" -e environment.json`{{execute}}
@@ -19,7 +19,7 @@ The result should be something like:
     "relationships": [
       ("wishlists": [
         {
-          "type": "wishlist",
+          "type": "wishlists",
           "id": "WISHLIST-ENTRY-ID"
         }
       ])

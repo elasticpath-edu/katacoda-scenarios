@@ -25,7 +25,7 @@ If last command returned with `Flow not found` error, complete the following ste
 
 * Send the request to create a flow and return the flow ID and slug that will be saved in `customersFlowID` and `customersFlowSlug` environment variables by the test script.
 
-`newman run collection.json --folcollectione a customer flow" -e environment.json --export-environment environment.json`{{execute}}
+`newman run collection.json --folder "Create a customer flow" -e environment.json --export-environment environment.json`{{execute}}
 
 ### Add Fields to the Customers Flow
 

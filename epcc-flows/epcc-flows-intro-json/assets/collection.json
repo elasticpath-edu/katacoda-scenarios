@@ -190,7 +190,11 @@
 									"const customer = Array.isArray(d) ? d[0] : d",
 									"const value = customer.id",
 									"pm.environment.set(\"customerID\", value)",
-									"tests[\"[INFO] Response: \" + JSON.stringify(customer,null,\"\\t\")] = true"
+									"tests[\"[INFO] Response: \" + JSON.stringify(customer,null,\"\\t\")] = true",
+									"if (json.hasOwnProperty(\"included\")) {",
+									"const ic = json.included",
+									"const wishlist = Array.isArray(ic.wishlists) ? ic.wishlists[0] : ic.wishlists",
+									"tests[\"[INFO] Wishlist: \" + JSON.stringify(wishlist,null,\"\\t\")] = true}"
 								],
 								"type": "text/javascript"
 							}
@@ -240,6 +244,11 @@
 									"key": "page[limit]",
 									"value": "10",
 									"disabled": true
+								},
+								{
+									"key": "include",
+									"value": "wishlists",
+									"disabled": false
 								}
 							]
 						}
