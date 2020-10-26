@@ -58,6 +58,10 @@
         ] 
       }
     },
+    "files": [
+      "/root/epcc-flows.json", 
+      "/root/environment.json"
+    ],
     "environment": {
           "showdashboard": true,
           "hideHiddenFiles": true,
@@ -66,7 +70,7 @@
           "autoFormatEnable": true,
           "uilayout": "editor-terminal",
           "uisettings": "javascript",
-          "uieditorpath": "/root/*.json"
+          "uieditorpath": "/root/"
     },
     "backend": {
       "imageid": "nodejs:12"

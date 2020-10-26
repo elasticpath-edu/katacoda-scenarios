@@ -82,19 +82,16 @@ With the custom Flow configured, next you will create an empty wishlist Entry an
 
 ### Create an Empty Wishlist (Flow Entry)
 
-* Open the collection in the editor:
-
-`/root/epcc-flows.json`{{open}}
-
-* Open the `Create an entry` request.
+* Open the collection in the editor
+* Open the `Create an entry` request
 * Replace the contents in the body section with:
 
-<pre class="file" data-filename="epcc-flows.json" data-target="insert" data-marker="#ENTRY-BODY">
+<pre class="file" data-filename="collection.json" data-target="insert" data-marker="#ENTRY-BODY">
 {\"data\": {\"type\": \"entry\"}}
 </pre>
-
+collection
 * Send the request to create an empty entry and return the entry ID to be saved in `entryID` environment variable by the test script.
 
-`newman run epcc-flows.json --folder "Create an entry" -e environment.json --export-environment environment.json`{{execute}}
+`newman run collection.json --folder "Create an entry" -e environment.json --export-environment environment.json`{{execute}}
 
-> In next step, you will create a relationship from this entry to the products.
+> In next step, you will create a relationship from this entry to the products.collection

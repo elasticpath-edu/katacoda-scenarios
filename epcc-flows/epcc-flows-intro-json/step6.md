@@ -69,51 +69,45 @@ Remove all relationships between an entry and resources.
 
 With the custom Flow Entry, now you can associate products with a wishlist Entry. Start by creating a new product:
 
-* Open the collection in the editor:
-
-`/root/epcc-flows.json`{{open}}
-
-* Open the `Create a product` request.
+* Open the collection in the editor
+* Open the `Create a product` request
 * Replace the contents in the body section with:
 
-<pre class="file" data-filename="epcc-flows.json" data-target="insert" data-marker="#PRODUCT-BODY">
+<pre class="file" data-filename="collection.json" data-target="insert" data-marker="#PRODUCT-BODY">
 {\"data\": {\"type\": \"product\",\"name\" : \"Playtend Switch Controller Pro Slim\",\"slug\": \"playtend-switch-controller-pro-slim\", \"sku\": \"PSAL01-{COLOUR}-1\",\"manage_stock\": false,\"description\": \"Playtend Switch Controller Pro Slim\",\"status\" : \"live\",\"commodity_type\": \"physical\",\"price\": [{ \"amount\": 7000, \"currency\": \"USD\", \"includes_tax\": true}]}}
 </pre>
-
+collection
 * Send the request to create a new product and return the product ID that will be saved in `productID` environment variable by the test script.
 
-`newman run epcc-flows.json --folder "Create a product" -e environment.json --export-environment environment.json`{{execute}}
+`newman run collection.json --folder "Create a product" -e environment.json --export-environment environment.json`{{execute}}
 
-* Open the collection in the editor:
-
-`/root/epcc-flows.json`{{open}}
-
-* Open the `Create an entry relationship` request.
+* Open the collection in the editor
+* Open the `collectionentry relationship` request
 * Replace the contents in the body section with:
 
-<pre class="file" data-filename="epcc-flows.json" data-target="insert" data-marker="#ENTRY-REL-BODY">
-{\"data\": [{\"type\": \"product\",\"id\": \"{{productID}}\"}]}
+<pre class="file" data-filename="collection.json" data-target="insert" data-marker="#ENTRY-REL-BODY">
+{\"datacollectionpe\": \"product\",\"id\": \"{{productID}}\"}]}
 </pre>
 
 * Send the request to create a new entry relationship connecting the product to the wishlist.
 
-`newman run epcc-flows.json --folder "Create an entry relationship" -e environment.json`{{execute}}
+`newman run collection.json --folcollectione an entry relationship" -e environment.json`{{execute}}
 
 >You can repeat these steps to add more products to the wishlist Entry. Use `Get all products` from `products` folder, to get a list of all the products.
 
-`newman run epcc-flows.json --folder "Get all products" -e environment.json --export-environment environment.json`{{execute}}
+`newman run collection.json --folder "Get all products" -e environment.json --export-environment environment.json`{{execute}}
 
-### Get all Wishlists
+### Get all collection
 
 * Run `Get all entries on a flow` request.
 
-`newman run epcc-flows.json --folder "Get all entries on a flow" -e environment.json --verbose`{{execute}}
+`newman run collection.json --folder "Get all entries on a flow" -e environment.json --verbose`{{execute}}
 
 >The response must contain the associated products **per Entry** like below.
 
 ```json
 {
-  "data": [
+  "data": [collection
       {
           "id": "58f1dd97-6bc3-4f30-9256-a82defbb9888",
           "type": "entry",

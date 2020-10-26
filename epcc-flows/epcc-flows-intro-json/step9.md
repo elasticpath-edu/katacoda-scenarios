@@ -1,16 +1,13 @@
 Let's check the `customer` resource to confirm that the wishlist(s) are returned directly on the data object.
 
-* Open the collection in the editor:
-
-`/root/epcc-flows.json`{{open}}
-
+* Open the collection in the editor
 * Open the `Get all customers` request. Add a param `include` as the key and `wishlists` as the value
 * Send the GET request for the customer.
 
-`newman run epcc-flows.json --folder "Get all customers" -e environment.json`{{execute}}
+`newman run collection.json --folder "Get all customers" -e environment.json`{{execute}}
 
 The result should be something like:
-
+collection
 ```json
 {
   "data": {
