@@ -12,6 +12,7 @@ With the new field `wishlists` in `customers` Flow, create a new relationship en
 {\"data\": [{\"type\": \"wishlists\",\"id\": \"{{entryID}}\"}]}
 </pre>
 > Remove any extra line breaks inserted in the raw data above.
+
 * Send the request to create a new entry relationship connecting the customer to the wishlist.
 
 `newman run collection.json --folder "Create a customer entry relationship" -e environment.json`{{execute}}

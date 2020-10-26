@@ -77,6 +77,7 @@ With the custom Flow Entry, now you can associate products with a wishlist Entry
 {\"data\": {\"type\": \"product\",\"name\" : \"Playtend Switch Controller Pro Slim\",\"slug\": \"playtend-switch-controller-pro-slim\", \"sku\": \"PSAL01-{COLOUR}-1\",\"manage_stock\": false,\"description\": \"Playtend Switch Controller Pro Slim\",\"status\" : \"live\",\"commodity_type\": \"physical\",\"price\": [{ \"amount\": 7000, \"currency\": \"USD\", \"includes_tax\": true}]}}
 </pre>
 > Remove any extra line breaks inserted in the raw data above.
+
 * Send the request to create a new product and return the product ID that will be saved in `productID` environment variable by the test script.
 
 `newman run collection.json --folder "Create a product" -e environment.json --export-environment environment.json`{{execute}}
@@ -89,6 +90,7 @@ With the custom Flow Entry, now you can associate products with a wishlist Entry
 {\"datacollectionpe\": \"product\",\"id\": \"{{productID}}\"}]}
 </pre>
 > Remove any extra line breaks inserted in the raw data above.
+
 * Send the request to create a new entry relationship connecting the product to the wishlist.
 
 `newman run collection.json --folcollectione an entry relationship" -e environment.json`{{execute}}

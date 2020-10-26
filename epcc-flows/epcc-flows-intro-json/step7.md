@@ -22,6 +22,7 @@ If last command returned with `Flow not found` error, complete the following ste
 {\"data\": {\"type\": \"flow\",\"name\": \"Customers\",\"slug\": \"customers\",\"description\": \"Extends the default customer object\",\"enabled\": true}}
 </pre>
 > Remove any extra line breaks inserted in the raw data above.
+
 * Send the request to create a flow and return the flow ID and slug that will be saved in `customersFlowID` and `customersFlowSlug` environment variables by the test script.
 
 `newman run collection.json --folcollectione a customer flow" -e environment.json --export-environment environment.json`{{execute}}
@@ -37,6 +38,7 @@ Now, create a new Field of relationship type to link a customer to wishlists:
 {\"data\": {\"type\": \"field\",\"name\": \"Wishlists\", \"slug\": \"wishlists\", \"field_type\": \"relationship\", \"validation_rules\": [{\"type\": \"one-to-many\",\"to\": \"wishlists\"}], \"description\": \"Customers wishlists\", \"unique\": false,\"enabled\": true, \"required\": false,\"relationships\": {\"flow\": {\"data\": {\"type\": \"flow\", \"id\": \"{{customersFlowID}}\"}}}}}
 </pre>
 > Remove any extra line breaks inserted in the raw data above.
+
 * Send the request to create a field and return the field ID and the field slug that will be saved in `wishlistFieldID` and `wishlistFieldSlug`  environment variables respectively by the test script.
 
 `newman run collection.json --folder "Create a wishlist field" -e environment.json --export-environment environment.json`{{execute}}
