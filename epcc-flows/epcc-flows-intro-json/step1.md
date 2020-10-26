@@ -18,6 +18,7 @@ The table below describes main differences between core and non-core Flows.
 |Entries managed automatically by Commerce Cloud.|	Need to manually create and manage Entries.|
 |Requests are sent to the Fields endpoint.|	Requests are sent to the Entries endpoint.|
 
+
 ### Extend a resource
 
 Extending a resource applies only to core flows. When creating a new flow, make sure the slug matches that of a core resource. For example, *address* object can be extended by creating a flow with slug as *addresses*.

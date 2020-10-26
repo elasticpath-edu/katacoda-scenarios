@@ -10,6 +10,7 @@ Flows allow you to extend an existing or create a new resource.
 |description|	string|	Any description for this flow.|
 |enabled|	bool|	true if enabled, false if not.|
 
+--------------
 
 ##### GET - Get a Flow
 
@@ -17,6 +18,7 @@ Flows allow you to extend an existing or create a new resource.
 https://api.moltin.com/v2/flows/:id
 ```
 
+--------------
 
 ##### POST - Create a Flow
 
@@ -32,6 +34,7 @@ https://api.moltin.com/v2/flows
 |name|	Required|	string|	The name of the flow.|
 |type|	Required|	string|	Represents the type of object being returned.|
 
+--------------
 
 ##### PUT - Update a Flow
 
@@ -48,6 +51,7 @@ https://api.moltin.com/v2/flows/:id
 |name|	Required|	string|	The name of the flow.|
 |type|	Required|	string|	Represents the type of object being returned.|
 
+--------------
 
 ##### DELETE - Delete a Flow
 

@@ -17,6 +17,7 @@ Fields and Entries are an integral part of Flows. A Flow describes a collection 
 |relationships|	object|	A relationship object to link this field to a flow.|
 |omit_null|	boolean|	Hide this field from responses if the value is null.|
 
+--------------
 
 ##### GET - Get all Fields
 
@@ -24,6 +25,7 @@ Fields and Entries are an integral part of Flows. A Flow describes a collection 
 https://api.moltin.com/v2/fields
 ```
 
+--------------
 
 ##### GET - Get all Fields by Flow
 
@@ -35,6 +37,7 @@ https://api.moltin.com/v2/flows/:slug/fields
 |--------|----------|----------|----------|
 |slug|	Required|	string|	The slug of the Flow you want to return fields for.|
 
+--------------
 
 ##### GET - Get a Field
 
@@ -46,6 +49,7 @@ https://api.moltin.com/v2/fields/:id
 |--------|----------|----------|----------|
 |id|	Required|	string|	The ID for the field you are requesting.|
 
+--------------
 
 ##### POST - Create a Field
 
@@ -67,6 +71,7 @@ https://api.moltin.com/v2/fields
 |omit_null|	Optional|	boolean|	Omit this field from responses if the value is null.|
 |relationships|	Required|	object|	A relationship object to link this field to a flow.|
 
+--------------
 
 ##### PUT - Update a Field
 
@@ -95,6 +100,7 @@ https://api.moltin.com/v2/fields/:id
 |omit_null|	Optional|	boolean|	Omit this field from responses if the value is null.|
 |relationships|	Required|	object|	A relationship object to link this field to a flow.|
 
+--------------
 
 ##### DELETE - Delete a Field
 
