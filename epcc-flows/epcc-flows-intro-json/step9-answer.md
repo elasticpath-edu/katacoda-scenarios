@@ -1,4 +1,4 @@
-When you send the following `GET` request, the result should be something as shown below:
+When you send the following **GET** request, the result should be something as shown below:
 
 `newman run collection.json --folder "Get all customers" -e environment.json --export-environment environment.json`{{execute}}
 
@@ -46,9 +46,9 @@ When you send the following `GET` request, the result should be something as sho
 
 If that's not the case, verify that you have followed all the steps. 
 
-You can also verify the following from the `Dashboard` tab:
+You can also verify the following from the **Dashboard** tab:
 
 * Wishlist flow has been created as a non-core resource?
 * Customers flow has been created to extend the core resource customer?
-* Wishlist flow has a field called `Products` that is of type `relationship` and is `one-to-many`?
-* Customers flow has a field called `wishlists` that is of type `relationship` and is `one-to-many`?
+* Wishlist flow has a field called **Products** that is of type **relationship** and is **one-to-many**?
+* Customers flow has a field called **wishlists** that is of type **relationship** and is **one-to-many**?
