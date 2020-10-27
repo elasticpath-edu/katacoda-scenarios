@@ -1,4 +1,9 @@
 {
+  "_": {
+    "postman_variable_scope": "environment",
+    "postman_exported_at": "2020-08-21T15:27:57.745Z",
+    "postman_exported_using": "Newman/5.1.2"
+  },
   "id": "2749e1c1-19fb-45d1-937c-8f25f7eeffda",
   "name": "EPCC Environment",
   "values": [
