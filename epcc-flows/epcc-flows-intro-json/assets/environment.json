@@ -41,16 +41,6 @@
       "type": "any",
       "value": null,
       "key": "accessToken"
-    },
-    {
-      "type": "any",
-      "value": null,
-      "key": "customersFlowID"
-    },
-    {
-      "type": "any",
-      "value": null,
-      "key": "customersFlowSlug"
     }
   ],
   "_postman_variable_scope": "environment",
