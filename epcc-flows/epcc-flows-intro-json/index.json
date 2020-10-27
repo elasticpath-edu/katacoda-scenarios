@@ -41,16 +41,15 @@
         "text": "step9.md",
         "verify": "step9-verify.sh",
         "answer": "step9-answer.md"
-      },
-      {
-          "title": "Congratulations",
-          "text": "step10.md"
       }
     ],
       "intro": {
         "text": "intro.md",
         "credits": "education@elasticpath.com",
         "code": "install-newman.sh"
+      },
+      "finish": {
+        "text": "finish.md"
       },
       "assets": {
         "client": [
@@ -62,7 +61,6 @@
       }
     },
     "environment": {
-          "hidefinish": true,
           "showdashboard": true,
           "hideHiddenFiles": true,
           "dashboards": [{"name": "Dashboard", "href": "https://dashboard.elasticpath.com"},
