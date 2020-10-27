@@ -61,7 +61,8 @@
     "environment": {
           "showdashboard": true,
           "hideHiddenFiles": true,
-          "dashboards": [{"name": "Dashboard", "href": "https://dashboard.elasticpath.com"}],
+          "dashboards": [{"name": "Dashboard", "href": "https://dashboard.elasticpath.com"},
+            {"name": "Documentation", "href": "https://documentation.elasticpath.com/commerce-cloud/docs/api/advanced/custom-data/flows.html"}],
           "delayToSaveFileAfterStopTypingMilliseconds": 2000,
           "autoFormatEnable": true,
           "uilayout": "editor-terminal",
