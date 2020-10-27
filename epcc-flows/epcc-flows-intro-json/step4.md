@@ -24,7 +24,8 @@ In this step, you will create a Field `products` to store the customers' desired
 
 * Open the collection in the editor
 * Open the `Create a field` request
-* Replace the contents in the body section with:
+> Click the `Copy to Clipboard` button to insert the below text in the body of `Create a field` request.
+> Remove any extra line breaks inserted with the raw data.
 
 <pre class="file" data-filename="collection.json" data-target="insert" data-marker="#FIELD-BODY">
 {\"data\": {\"type\": \"field\",\"name\": \"Products\",\"slug\": \"products\",\"field_type\": \"relationship\",

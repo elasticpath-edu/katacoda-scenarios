@@ -15,13 +15,14 @@ Flows allow you to extend an existing or create a new resource. For more details
 
 Complete the following steps to create a custom Flow:
 
-* Open the collection.json in the editor
+* Open the postman collection from the `collection.json` file in the editor
 * Open the `Create a flow` request and replace the contents in the `Body` section with:
-> Click the `Copy to Clipboard` button to insert the below text in the body of the request. Make s
+> Click the `Copy to Clipboard` button to insert the below text in the body of `Create a flow` request.
+> Remove any extra line breaks inserted with the raw data.
+
 <pre class="file" data-filename="collection.json" data-target="insert" data-marker="#FLOW-BODY">
 {\"data\": {\"type\": \"flow\",\"name\": \"Wishlists\",\"slug\": \"wishlists\",\"description\": \"Allow customers to store products they want to purchase at a later date\",\"enabled\": true}}
 </pre>
-> Remove any extra line breaks inserted in the raw data above.
 
 * Send the request to create a flow and return the flow ID and slug that will be saved in `flowID` and `flowSlug` environment variables by the test script.
 
