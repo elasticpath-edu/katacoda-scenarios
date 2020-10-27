@@ -194,78 +194,8 @@
 									"if (json.hasOwnProperty(\"included\")) {",
 									"const ic = json.included",
 									"const wishlist = Array.isArray(ic.wishlists) ? ic.wishlists[0] : ic.wishlists",
+									"if (json.hasOwnProperty(\"included\")) {pm.environment.set(\"customerTest\", \"PASSED\")}",
 									"tests[\"[INFO] Wishlist: \" + JSON.stringify(wishlist,null,\"\\t\")] = true}"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "accept",
-								"value": "application/json"
-							},
-							{
-								"key": "content-type",
-								"value": "application/json"
-							},
-							{
-								"key": "x-moltin-auth-store",
-								"value": "{{storeID}}"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/customers",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"customers"
-							],
-							"query": [
-								{
-									"key": "page[offset]",
-									"value": "0",
-									"disabled": true
-								},
-								{
-									"key": "page[limit]",
-									"value": "10",
-									"disabled": true
-								},
-								{
-									"key": "include",
-									"value": "wishlists",
-									"disabled": false
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Verify customer wishlist",
-					"event": [
-						{
-							"type": "text/javascript",
-							"listen": "test",
-							"script": {
-								"id": "00dd530b-b9f3-4330-9cfe-2b2b536dda50",
-								"exec": [
-									"const json = pm.response.json()",
-									"if (json.hasOwnProperty(\"included\")) {pm.environment.set(\"customerTest\", \"PASSED\")}"
 								],
 								"type": "text/javascript"
 							}

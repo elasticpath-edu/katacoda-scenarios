@@ -35,4 +35,4 @@ You will be using the API key from your training store to create a new environme
 
 * Send the request again and you should receive a `200` success this time: 
 
-`newman run collection.json --folder "Get all products" -e environment.json --verbose`{{execute}}
+`newman run collection.json --folder "Get all products" -e environment.json --export-environment environment.json`{{execute}}
