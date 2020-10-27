@@ -54,7 +54,7 @@
       "assets": {
         "client": [
           {
-            "file": "*.json",
+            "file": "*",
             "target": "/root"
           }
         ] 

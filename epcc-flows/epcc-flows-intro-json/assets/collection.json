@@ -194,7 +194,7 @@
 									"if (json.hasOwnProperty(\"included\")) {",
 									"const ic = json.included",
 									"const wishlist = Array.isArray(ic.wishlists) ? ic.wishlists[0] : ic.wishlists",
-									"if (json.hasOwnProperty(\"included\")) {pm.environment.set(\"customerTest\", \"PASSED\")}",
+									"pm.environment.set(\"finalFlowTest\", \"PASSED\")",
 									"tests[\"[INFO] Wishlist: \" + JSON.stringify(wishlist,null,\"\\t\")] = true}"
 								],
 								"type": "text/javascript"
