@@ -11,7 +11,7 @@
       {
         "title": "Set up the Training Environment and Authenticate",
         "text": "step2.md",
-        "courseData": "install-newman.sh"
+        "code": "install-newman.sh"
       },
       {
         "title": "Create a Flow (Custom Resource)",
