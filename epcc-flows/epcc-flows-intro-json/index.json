@@ -43,7 +43,8 @@
     ],
       "intro": {
         "text": "intro.md",
-        "credits": "education@elasticpath.com"
+        "credits": "education@elasticpath.com",
+        "code": "install-newman.sh"
       },
       "finish": {
         "text": "finish.md"

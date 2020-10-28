@@ -2,7 +2,7 @@ In this scenario, you will learn about Flows and how to use Flows to extend and 
 
 ### Prerequisites
 
-* Newman (Postman's CLI version)
+* Newman (Postman's CLI version), already installed in the environment
 * Elastic Path Commerce Cloud account that you can use for this training
 
 ### Objectives
