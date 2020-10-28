@@ -10,7 +10,8 @@
       },
       {
         "title": "Set up the Training Environment and Authenticate",
-        "text": "step2.md"
+        "text": "step2.md",
+        "courseData": "install-newman.sh"
       },
       {
         "title": "Create a Flow (Custom Resource)",
@@ -43,8 +44,7 @@
     ],
       "intro": {
         "text": "intro.md",
-        "credits": "education@elasticpath.com",
-        "code": "install-newman.sh"
+        "credits": "education@elasticpath.com"
       },
       "finish": {
         "text": "finish.md"
