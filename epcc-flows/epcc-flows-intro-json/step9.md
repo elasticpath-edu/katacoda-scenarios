@@ -4,7 +4,7 @@ Let's check the `customer` resource to confirm that the wishlist(s) are returned
 * Open the `Get all customers` request. Make sure there is a query parameter `?include=wishlists` in the request
 * When you send the following **GET** request, the result should be something as shown below:
 
-`newman run collection.json --folder "Get all customers" -e environment.json --export-environment environment.json`{{execute}}
+`newman run collection.json --folder "Get all customers" -e environment.json`{{execute}}
 
 ```json
 {
@@ -48,7 +48,7 @@ Let's check the `customer` resource to confirm that the wishlist(s) are returned
 }
 ```
 
-If you don't get the results as expected, trace back all the steps to verify that you didn't miss any step.
+If you don't get the results as expected, trace back all the steps to verify that you didn't miss any.
 
 You can also verify the following from the **Dashboard** tab:
 
