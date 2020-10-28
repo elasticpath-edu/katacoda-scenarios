@@ -1,1 +1,0 @@
-(grep -q "PASSED" /root/environment.json) && echo "done"
