@@ -2,12 +2,7 @@ In this exercise, you will attempt to access an API endpoint without authorizati
 
 ### Install Newman
 
-Let's make sure that Newman is installed by running the following command in the terminal:
->Click on the command below to copy and execute the command in the terminal.
-
-`newman`{{execute}}
-
-If you get the error `bash: newman: command not found`, Newman can be installed with the following command:
+Let's start by installing Newman that can be installed with `npm`:
 >Click on the command below to copy and execute the command in the terminal.
 
 `npm install newman -g`{{execute}}
