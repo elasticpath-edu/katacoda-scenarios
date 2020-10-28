@@ -1,5 +1,17 @@
 In this exercise, you will attempt to access an API endpoint without authorization, see the error, then authenticate properly to receive a client credentials token. 
 
+### Install Newman
+
+Let's make sure that Newman is installed by running the following command in the terminal:
+>Click on the command below to copy and execute the command in the terminal.
+
+`newman`{{execute}}
+
+If you get the error `bash: newman: command not found`, Newman can be installed with the following command:
+>Click on the command below to copy and execute the command in the terminal.
+
+`npm install newman -g`{{execute}}
+
 ### Attempt to get products list
 
 * Open the postman collection from the `collection.json` file in the editor
