@@ -15,9 +15,8 @@ With the custom Flow configured, next you will create an empty wishlist Entry an
 
 ### Create an Empty Wishlist (Flow Entry)
 
-* Open the collection in the editor
-* Open the `Create an entry` request
-* Replace the contents in the body section with:
+* Open the collection from `collection.json`{{open}} in the editor
+* Replace the contents in the body section of the `Create an entry` request with:
 
 <pre class="file" data-filename="collection.json" data-target="insert" data-marker="#ENTRY-BODY">
 {\"data\": {\"type\": \"entry\"}}

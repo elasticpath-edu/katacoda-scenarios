@@ -22,16 +22,15 @@ Fields and Entries are an integral part of Flows. A Flow describes a collection 
 
 In this step, you will create a Field `products` to store the customers' desired products.
 
-* Open the collection in the editor
-* Open the `Create a field` request
-> Click the `Copy to Clipboard` button to insert the below text in the body of `Create a field` request.
+* Open the collection from `collection.json`{{open}} in the editor
+* Replace the contents in the body section of the `Create an field` request with the text below:
+> Click the `Copy to Clipboard` button to insert the text in the editor.
 > Remove any extra line breaks inserted with the raw data.
 
 <pre class="file" data-filename="collection.json" data-target="insert" data-marker="#FIELD-BODY">
 {\"data\": {\"type\": \"field\",\"name\": \"Products\",\"slug\": \"products\",\"field_type\": \"relationship\",
 \"validation_rules\": [{\"type\": \"one-to-many\",\"to\": \"products\"}],\"description\": \"Wishlist Products\",\"required\": false,\"enabled\": true,\"relationships\": {\"flow\": {\"data\": {\"type\": \"flow\",\"id\": \"{{flowID}}\"}}}}}
 </pre>
-> Remove any extra line breaks inserted in the raw data above.
 
 * Send the request to create a field and return the field ID and field slug that will be saved in `fieldID` and `fieldSlug` environment variables by the script.
 

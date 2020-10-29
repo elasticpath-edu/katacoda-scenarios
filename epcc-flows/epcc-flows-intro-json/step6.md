@@ -4,9 +4,8 @@ When you create a field that uses relationship as a field_type, you update your 
 
 With the custom Flow Entry, now you can associate products with a wishlist Entry. Start by creating a new product:
 
-* Open the collection in the editor
-* Open the `Create a product` request
-* Replace the contents in the body section with:
+* Open the collection from `collection.json`{{open}} in the editor
+* Replace the contents in the body section of the `Create a product` request with:
 
 <pre class="file" data-filename="collection.json" data-target="insert" data-marker="#PRODUCT-BODY">
 {\"data\": {\"type\": \"product\",\"name\" : \"Playtend Switch Controller Pro Slim\",\"slug\": \"playtend-switch-controller-pro-slim\", \"sku\": \"PSAL01-{COLOUR}-1\",\"manage_stock\": false,\"description\": \"Playtend Switch Controller Pro Slim\",\"status\" : \"live\",\"commodity_type\": \"physical\",\"price\": [{ \"amount\": 7000, \"currency\": \"USD\", \"includes_tax\": true}]}}
@@ -17,9 +16,7 @@ With the custom Flow Entry, now you can associate products with a wishlist Entry
 
 `newman run collection.json --folder "Create a product" -e environment.json --export-environment environment.json`{{execute}}
 
-* Open the collection in the editor
-* Open the `collectionentry relationship` request
-* Replace the contents in the body section with:
+* Replace the contents in the body section of the `Create an entry relationship` request with:
 
 <pre class="file" data-filename="collection.json" data-target="insert" data-marker="#ENTRY-REL-BODY">
 {\"data\": [{\"type\": \"product\",\"id\": \"{{productID}}\"}]}

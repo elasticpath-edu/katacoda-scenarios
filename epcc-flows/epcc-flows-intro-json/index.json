@@ -39,8 +39,7 @@
       },
       {
         "title": "Verify the Wishlist",
-        "text": "step9.md",
-        "verify": "step9-verify.sh"
+        "text": "step9.md"
       }
     ],
       "intro": {

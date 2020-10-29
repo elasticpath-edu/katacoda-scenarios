@@ -1,6 +1,5 @@
 Let's check the `customer` resource to confirm that the wishlist(s) are returned directly on the data object.
 
-* Open the collection in the editor
 * Open the `Get all customers` request. Make sure there is a query parameter `?include=wishlists` in the request
 * When you send the following **GET** request, the result should be something as shown below:
 
