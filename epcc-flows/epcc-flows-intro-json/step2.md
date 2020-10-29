@@ -2,7 +2,7 @@ In this exercise, you will attempt to access an API endpoint without authorizati
 
 ### Attempt to get products list
 
-* Open the postman collection from the `collection.json` file in the editor
+* Open the postman collection from the `collection.json`{{open}} file in the editor
 * Search and explore the `Get all products` request
 * Send the request below and you should receive a 401 error:
 >Click on the command below to copy and execute the command in the terminal.
