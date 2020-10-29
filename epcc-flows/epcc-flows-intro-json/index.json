@@ -65,7 +65,7 @@
             {"name": "Documentation", "href": "https://documentation.elasticpath.com/commerce-cloud/docs/api/advanced/custom-data/flows.html"}],
           "delayToSaveFileAfterStopTypingMilliseconds": 1000,
           "autoFormatEnable": true,
-          "uilayout": "editor-terminal",
+          "uilayout": "vscode-terminal-split",
           "uisettings": "javascript",
           "uieditorpath": "/root/"
     },

@@ -34,9 +34,3 @@ Adding a new resource is applicable only to non-core (custom) flows.
 **A Field** represents a single field of data (for example a Product Rating) to be applied to an entity. All Fields have a type (string, integer, boolean, date or relationship), a default value, and an optional set of validation rules.
 
 **An Entry** is a specific instance of a Flow, and is associated with a specific instance of an entity (for example, a single product). Use Entries for custom flows (non-core) only. For core flows, these are managed for you.
-
-
-
-
-
-
