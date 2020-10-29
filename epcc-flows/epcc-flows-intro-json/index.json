@@ -39,8 +39,7 @@
       },
       {
         "title": "Verify the Wishlist",
-        "text": "step9.md",
-        "verify": "step9-verify.sh"
+        "text": "step9.md"
       }
     ],
       "intro": {
@@ -66,7 +65,7 @@
             {"name": "Documentation", "href": "https://documentation.elasticpath.com/commerce-cloud/docs/api/advanced/custom-data/flows.html"}],
           "delayToSaveFileAfterStopTypingMilliseconds": 1000,
           "autoFormatEnable": true,
-          "uilayout": "vscode-terminal-split",
+          "uilayout": "editor-terminal",
           "uisettings": "javascript",
           "uieditorpath": "/root/"
     },
